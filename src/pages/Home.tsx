@@ -1,6 +1,18 @@
 import { Box, Heading, Text, Image, Stack, Center } from "@chakra-ui/react";
+import { useTranslation } from "react-i18next";
 
 function Home() {
+  const { t, i18n } = useTranslation();
+
+  const changeLanguage = (language: string) => {
+    try {
+      i18n.changeLanguage(language);
+      localStorage.setItem("i18nextLng", language); // Save language to localStorage
+    } catch (error) {
+      console.error("Error saving language to localStorage", error);
+    }
+  };
+
   return (
     <Box flex="1" p={4} bg="orange.50" color="orange.900">
       <Center>
@@ -36,6 +48,11 @@ function Home() {
               fames ac turpis. Quis ipsum suspendisse ultrices gravida.
             </Text>
           </Stack>
+          <h1>{t("welcome")}</h1>
+          <p>{t("description")}</p>
+
+          <button onClick={() => changeLanguage("en")}>English</button>
+          <button onClick={() => changeLanguage("nl")}>Nederlands</button>
         </Stack>
       </Center>
     </Box>
