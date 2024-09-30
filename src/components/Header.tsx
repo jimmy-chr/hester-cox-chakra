@@ -2,7 +2,7 @@ import { Box, Flex, Heading, Link, SimpleGrid } from "@chakra-ui/react";
 
 function Header() {
   return (
-    <Box bg="green.700" p={4} color="orange.100">
+    <Box bg="green.800" p={4} color="orange.50">
       <Flex justify="space-between" align="center">
         <SimpleGrid columns={1}>
           <Heading as="h1" size="lg" paddingY={2}>

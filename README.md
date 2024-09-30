@@ -2,11 +2,10 @@
 
 Todo
 
-- add chakra
-- favicon
-- header / footer / content
 - i18n
 - integrate firebase
+- footer icons and links
+- menu links and pages
 - cleanup
 
 # React + TypeScript + Vite
