@@ -19,7 +19,7 @@ i18n
   .use(initReactI18next)
   .init({
     resources, // Specify type for the resources object
-    fallbackLng: localStorage.getItem("i18nextLng") || "en", // Default to stored language or English
+    fallbackLng: localStorage.getItem("i18nextLng") || "en" || "nl", // Default to stored language or English
     debug: true, // Enable debug mode
     interpolation: {
       escapeValue: false, // React already escapes values by default

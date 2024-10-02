@@ -1,4 +1,5 @@
 import { Box, Flex, Heading, Link, SimpleGrid } from "@chakra-ui/react";
+import { LanguageSelect } from "./LanguageSelect";
 
 function Header() {
   return (
@@ -25,6 +26,7 @@ function Header() {
           <Link mx={2} href="#contact">
             Contact
           </Link>
+          <LanguageSelect />
         </nav>
       </Flex>
     </Box>
