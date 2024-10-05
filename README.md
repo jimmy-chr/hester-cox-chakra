@@ -4,4 +4,5 @@ Todo
 
 - footer icons and links
 - menu links and pages
-- cleanup
+- cleanup (sizes)
+- responsiveness
