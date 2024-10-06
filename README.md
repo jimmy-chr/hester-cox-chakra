@@ -2,5 +2,5 @@
 
 Todo
 
-- cleanup (sizes)
 - responsiveness
+- paginas opvullen

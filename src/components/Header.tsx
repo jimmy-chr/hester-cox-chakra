@@ -6,35 +6,35 @@ import { Link as ReactRouterLink } from "react-router-dom";
 function Header() {
   const { t } = useTranslation();
   return (
-    <Box bg="green.800" p={4} color="orange.50">
+    <Box bg="green.800" p={"1em"} color="orange.50">
       <Flex justify="space-between" align="center">
         <Stack direction={"column"}>
           <Link
-            mx={3}
+            mx={"1em"}
             as={ReactRouterLink}
             to="/"
             style={{ textDecoration: "none" }}
           >
-            <Heading as="h1" size="lg" paddingY={2}>
+            <Heading as="h1" size="lg" paddingY={"0.5em"}>
               {t("header.title")}
             </Heading>
-            <Heading as="h2" size="md" paddingY={1}>
+            <Heading as="h2" size="md" paddingY={"0.25em"}>
               {t("header.subtitle")}
             </Heading>
           </Link>
         </Stack>
         <Stack direction={"row"} alignItems={"center"}>
           <nav>
-            <Link mx={3} as={ReactRouterLink} to="/collection">
+            <Link mx={"1em"} as={ReactRouterLink} to="/collection">
               {t("menu.collection")}
             </Link>
-            <Link mx={3} as={ReactRouterLink} to="/accessories">
+            <Link mx={"1em"} as={ReactRouterLink} to="/accessories">
               {t("menu.accessories")}
             </Link>
-            <Link mx={3} as={ReactRouterLink} to="/about-me">
+            <Link mx={"1em"} as={ReactRouterLink} to="/about-me">
               {t("menu.about-me")}
             </Link>
-            <Link mx={3} as={ReactRouterLink} to="/contact">
+            <Link mx={"1em"} as={ReactRouterLink} to="/contact">
               {t("menu.contact")}
             </Link>
           </nav>
