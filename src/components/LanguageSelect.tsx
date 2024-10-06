@@ -6,9 +6,6 @@ import { MdLanguage } from "react-icons/md";
 export const LanguageSelect = () => {
   const { i18n } = useTranslation();
 
-  console.log(i18n.options.resources);
-  console.log(i18n.languages);
-
   const changeLanguage = (event: ChangeEvent<HTMLSelectElement>) => {
     const language = event.target.value;
     try {

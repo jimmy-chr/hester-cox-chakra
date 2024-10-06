@@ -9,9 +9,9 @@ function Home() {
   return (
     <>
       <Header />
-      <Box flex="1" p={4} bg="orange.50" color="orange.900">
+      <Box flex="1" p={"1em"} bg="orange.50" color="orange.900">
         <Center>
-          <Stack spacing={4} maxWidth="60em">
+          <Stack spacing={"1em"} maxWidth="60em">
             <Box>
               <Heading id="home">{t("home.title")}</Heading>
             </Box>
