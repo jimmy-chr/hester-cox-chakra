@@ -2,6 +2,7 @@ import { Box, Flex, Heading, Link, Stack } from "@chakra-ui/react";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { Link as ReactRouterLink } from "react-router-dom";
+import Navigation from "./Navigation";
 
 function Header() {
   const { t } = useTranslation();
@@ -24,20 +25,7 @@ function Header() {
           </Link>
         </Stack>
         <Stack direction={"row"} alignItems={"center"}>
-          <nav>
-            <Link mx={"1em"} as={ReactRouterLink} to="/collection">
-              {t("menu.collection")}
-            </Link>
-            <Link mx={"1em"} as={ReactRouterLink} to="/accessories">
-              {t("menu.accessories")}
-            </Link>
-            <Link mx={"1em"} as={ReactRouterLink} to="/about-me">
-              {t("menu.about-me")}
-            </Link>
-            <Link mx={"1em"} as={ReactRouterLink} to="/contact">
-              {t("menu.contact")}
-            </Link>
-          </nav>
+          <Navigation />
           <LanguageSelect />
         </Stack>
       </Flex>
