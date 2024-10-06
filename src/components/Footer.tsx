@@ -8,7 +8,7 @@ const Footer = () => {
         direction="row"
         width={"100%"}
         justifyContent={"center"}
-        spacing={10}
+        spacing={"2em"}
         alignItems={"center"}
       >
         <Text color="orange.50">© 2024 Hester Cox. All Rights Reserved.</Text>
