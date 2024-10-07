@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Link, Stack } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, Spacer, Stack } from "@chakra-ui/react";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { Link as ReactRouterLink } from "react-router-dom";
@@ -8,7 +8,7 @@ function Header() {
   const { t } = useTranslation();
   return (
     <Box bg="green.800" p={"1em"} color="orange.50">
-      <Flex justify="space-between" align="center">
+      <Flex justify="space-between" align="flex-start">
         <Stack direction={"column"}>
           <Link
             mx={"1em"}
@@ -24,10 +24,11 @@ function Header() {
             </Heading>
           </Link>
         </Stack>
-        <Stack direction={"row"} alignItems={"center"}>
-          <Navigation />
+        <Flex flexDirection="column" align="flex-end">
           <LanguageSelect />
-        </Stack>
+          <Spacer />
+          <Navigation />
+        </Flex>
       </Flex>
     </Box>
   );

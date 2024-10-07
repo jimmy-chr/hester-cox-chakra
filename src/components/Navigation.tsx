@@ -17,7 +17,7 @@ import { MdMenu, MdClose } from "react-icons/md";
 
 function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const isMobile = useBreakpointValue({ base: true, md: false }); // base = mobile, md = desktop+
+  // const isMobile = useBreakpointValue({ base: true, md: false }); // base = mobile, md = desktop+
   const { t } = useTranslation();
   const links = [
     { name: t("menu.collection"), path: "/collection" },
@@ -42,6 +42,8 @@ function Navigation() {
       </HStack>
       {/* Mobile Hamburger Icon */}
       <IconButton
+        variant="subtle"
+        fontSize={"2em"}
         size="lg"
         icon={isOpen ? <MdClose /> : <MdMenu />}
         aria-label="Open Menu"
