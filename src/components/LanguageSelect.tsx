@@ -1,5 +1,5 @@
 import { ChangeEvent } from "react";
-import { Select } from "@chakra-ui/react";
+import { Select, Box } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import { MdLanguage } from "react-icons/md";
 
@@ -17,26 +17,28 @@ export const LanguageSelect = () => {
   };
 
   return (
-    <Select
-      width={"4em"}
-      defaultValue={i18n.resolvedLanguage}
-      onChange={changeLanguage}
-      variant={"flushed"}
-      border={0}
-      sx={{
-        "> option": {
-          background: "orange.50",
-          color: "orange.900",
-        },
-      }}
-      textAlign={"center"}
-      icon={<MdLanguage />}
-    >
-      {["en", "nl"].map((cur) => (
-        <option key={cur} value={cur}>
-          {cur.toUpperCase()}
-        </option>
-      ))}
-    </Select>
+    <Box paddingBottom="0.5em">
+      <Select
+        width={"4em"}
+        defaultValue={i18n.resolvedLanguage}
+        onChange={changeLanguage}
+        variant={"flushed"}
+        border={0}
+        sx={{
+          "> option": {
+            background: "orange.50",
+            color: "orange.900",
+          },
+        }}
+        textAlign={"center"}
+        icon={<MdLanguage />}
+      >
+        {["en", "nl"].map((cur) => (
+          <option key={cur} value={cur}>
+            {cur.toUpperCase()}
+          </option>
+        ))}
+      </Select>
+    </Box>
   );
 };
