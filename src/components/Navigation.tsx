@@ -2,7 +2,6 @@ import {
   Link,
   HStack,
   IconButton,
-  useBreakpointValue,
   useDisclosure,
   Drawer,
   DrawerOverlay,
@@ -29,7 +28,6 @@ function Navigation() {
   return (
     <>
       <HStack
-        spacing={8}
         alignItems="center"
         display={{ base: "none", md: "flex" }}
         as="nav"
