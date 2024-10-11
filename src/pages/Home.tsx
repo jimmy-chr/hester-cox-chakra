@@ -15,18 +15,18 @@ function Home() {
             <Box>
               <Heading id="home">{t("home.title")}</Heading>
             </Box>
-            <Stack direction="row" gap="1em">
-              <Box>
-                <Image
-                  minW={["10em", "15em", "25em"]}
-                  height="auto"
-                  borderRadius="0.5em"
-                  src="assets/atelier.jpg"
-                  alt="Hester Cox Atelier"
-                />
-              </Box>
-              <Text>{t("home.introduction")}</Text>
-            </Stack>
+            <Text>
+              <Image
+                maxW={["10em", "15em", "30em"]}
+                height="auto"
+                borderRadius="0.5em"
+                src="assets/atelier.jpg"
+                alt="Hester Cox Atelier"
+                float={"left"}
+                marginRight={"1em"}
+              />
+              {t("home.introduction")}
+            </Text>
           </Stack>
         </Center>
       </Box>
