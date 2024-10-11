@@ -1,25 +1,47 @@
-import { Box, Heading, Stack, Center } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Heading, Text, Divider, Image } from "@chakra-ui/react";
+import Page from "../components/Page";
+import { Trans, useTranslation } from "react-i18next";
 
 function Collection() {
   const { t } = useTranslation();
-
   return (
-    <>
-      <Header />
-      <Box flex="1" p={["1em", "2em"]} bg="orange.50" color="orange.900">
-        <Center>
-          <Stack spacing={"1em"} maxWidth="60em">
-            <Box>
-              <Heading id="collection">{t("collection.title")}</Heading>
-            </Box>
-          </Stack>
-        </Center>
-      </Box>
-      <Footer />
-    </>
+    <Page titleId="collection" titleKey="collection.title">
+      <Text>{t("collection.introduction")}</Text>
+
+      <Divider />
+      <Heading id="aimant" as="h4" size={"lg"}>
+        Aimant
+      </Heading>
+      <Text>
+        <Image
+          maxW={["10em", "15em", "30em"]}
+          height="auto"
+          borderRadius="0.5em"
+          src="assets/aimant1.jpg"
+          alt="Hester Cox Atelier"
+          float="left"
+          marginRight="1em"
+        />
+        <Trans i18nKey="home.introduction" />
+      </Text>
+
+      <Divider />
+      <Heading id="aimant" as="h4" size={"lg"}>
+        Aimant
+      </Heading>
+      <Text>
+        <Image
+          maxW={["10em", "15em", "30em"]}
+          height="auto"
+          borderRadius="0.5em"
+          src="assets/aimant1.jpg"
+          alt="Hester Cox Atelier"
+          float="left"
+          marginRight="1em"
+        />
+        <Trans i18nKey="home.introduction" />
+      </Text>
+    </Page>
   );
 }
 
