@@ -1,25 +1,11 @@
-import { Box, Heading, Stack, Center } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { Text } from "@chakra-ui/react";
+import Page from "../components/Page";
 
 function Contact() {
-  const { t } = useTranslation();
-
   return (
-    <>
-      <Header />
-      <Box flex="1" p={["1em", "2em"]} bg="orange.50" color="orange.900">
-        <Center>
-          <Stack spacing={"1em"} maxWidth="60em">
-            <Box>
-              <Heading id="contact">{t("contact.title")}</Heading>
-            </Box>
-          </Stack>
-        </Center>
-      </Box>
-      <Footer />
-    </>
+    <Page titleId="contact" titleKey="contact.title">
+      <Text>placeholder</Text>
+    </Page>
   );
 }
 
