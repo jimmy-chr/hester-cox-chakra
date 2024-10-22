@@ -15,7 +15,20 @@
   },
   "collection": {
     "title": "Collection",
-    "introduction": "My collection."
+    "introduction": "My collection.",
+    "picture": "picture",
+    "aimant": {
+      "description": "English description Aimant"
+    },
+    "maisa": {
+      "description": "English description Maisa"
+    },
+    "eclair": {
+      "description": "English description Éclair"
+    },
+    "dokterstas": {
+      "description": "English description Dokterstas"
+    }
   },
   "accessories": {
     "title": "Accessories"

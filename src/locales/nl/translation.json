@@ -15,7 +15,20 @@
   },
   "collection": {
     "title": "Collectie",
-    "introduction": "Mijn collectie."
+    "introduction": "Mijn collectie.",
+    "picture": "foto",
+    "aimant": {
+      "description": "Nederlandse omschrijving Aimant"
+    },
+    "maisa": {
+      "description": "Nederlandse omschrijving Maisa"
+    },
+    "eclair": {
+      "description": "Nederlandse omschrijving Éclair"
+    },
+    "dokterstas": {
+      "description": "Nederlandse omschrijving Dokterstas"
+    }
   },
   "accessories": {
     "title": "Accessories"
