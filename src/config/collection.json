@@ -1,0 +1,59 @@
+[
+  {
+    "id": "aimant",
+    "name": "Aimant",
+    "pictures": [
+      {
+        "file": "/assets/aimant1.jpg"
+      },
+      {
+        "file": "/assets/aimant2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "maisa",
+    "name": "Maisa",
+    "pictures": [
+      {
+        "file": "/assets/maisa1.jpg"
+      },
+      {
+        "file": "/assets/maisa2.jpg"
+      },
+      {
+        "file": "/assets/maisa3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "eclair",
+    "name": "Éclair",
+    "pictures": [
+      {
+        "file": "/assets/eclair1.jpg"
+      },
+      {
+        "file": "/assets/eclair2.jpg"
+      },
+      {
+        "file": "/assets/eclair3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "dokterstas",
+    "name": "Dokterstas",
+    "pictures": [
+      {
+        "file": "/assets/dokterstas1.jpg"
+      },
+      {
+        "file": "/assets/dokterstas2.jpg"
+      },
+      {
+        "file": "/assets/dokterstas3.jpg"
+      }
+    ]
+  }
+]
