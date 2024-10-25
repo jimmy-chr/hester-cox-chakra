@@ -31,7 +31,8 @@
     }
   },
   "accessories": {
-    "title": "Accessories"
+    "title": "Accessoires",
+    "introduction": "Allerhande accessoires."
   },
   "about-me": {
     "title": "Over mij"
