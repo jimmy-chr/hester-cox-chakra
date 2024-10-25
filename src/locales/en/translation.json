@@ -31,7 +31,8 @@
     }
   },
   "accessories": {
-    "title": "Accessories"
+    "title": "Accessories",
+    "introduction": "Assorted accessories."
   },
   "about-me": {
     "title": "About me"
