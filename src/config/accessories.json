@@ -1,0 +1,41 @@
+[
+  {
+    "id": "belt",
+    "pictures": [
+      {
+        "file": "/assets/img-accessories/belt1.jpg"
+      },
+      {
+        "file": "/assets/img-accessories/belt2.jpg"
+      },
+      {
+        "file": "/assets/img-accessories/belt3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "card-holder",
+    "pictures": [
+      {
+        "file": "/assets/img-accessories/card-holder1.jpg"
+      },
+      {
+        "file": "/assets/img-accessories/card-holder2.jpg"
+      }
+    ]
+  },
+  {
+    "id": "wallet",
+    "pictures": [
+      {
+        "file": "/assets/img-accessories/wallet1.jpg"
+      },
+      {
+        "file": "/assets/img-accessories/wallet2.jpg"
+      },
+      {
+        "file": "/assets/img-accessories/wallet3.jpg"
+      }
+    ]
+  }
+]

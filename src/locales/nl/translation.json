@@ -32,7 +32,20 @@
   },
   "accessories": {
     "title": "Accessoires",
-    "introduction": "Allerhande accessoires."
+    "introduction": "Allerhande accessoires.",
+    "picture": "foto",
+    "belt": {
+      "title": "Riem",
+      "description": "Nederlandse omschrijving riem"
+    },
+    "card-holder": {
+      "title": "Kaartenhouder",
+      "description": "Nederlandse omschrijving kaartenhouder"
+    },
+    "wallet": {
+      "title": "Portemonnee",
+      "description": "Nederlandse omschrijving portemonnee"
+    }
   },
   "about-me": {
     "title": "Over mij"

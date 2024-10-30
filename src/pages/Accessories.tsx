@@ -1,29 +1,54 @@
-import { Text, Card, CardBody, Stack, Heading, Image } from "@chakra-ui/react";
+import {
+  Text,
+  Card,
+  CardBody,
+  Stack,
+  Heading,
+  Image,
+  Grid,
+  GridItem,
+} from "@chakra-ui/react";
 import Page from "../components/Page";
 import { useTranslation } from "react-i18next";
+import accessories from "../config/accessories.json";
 
 function Accessories() {
   const { t } = useTranslation();
+  const items = accessories.map((item) => {
+    return (
+      <GridItem w="100%">
+        <Card maxW="sm">
+          <CardBody>
+            <Image
+              src={item.pictures[0].file}
+              alt={`${t(`accessories.${item.id}.title`)} ${t(
+                "collection.picture"
+              )}`}
+              borderRadius="lg"
+            />
+            <Stack mt="6" spacing="3">
+              <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
+              <Text>{t(`accessories.${item.id}.description`)}</Text>
+            </Stack>
+          </CardBody>
+        </Card>
+      </GridItem>
+    );
+  });
+
   return (
     <Page titleId="accessories" titleKey="accessories.title">
       <Text>{t("accessories.introduction")}</Text>
-      <Card maxW="sm">
-        <CardBody>
-          <Image
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
-            alt="Green double couch with wooden legs"
-            borderRadius="lg"
-          />
-          <Stack mt="6" spacing="3">
-            <Heading size="md">Living room Sofa</Heading>
-            <Text>
-              This sofa is perfect for modern tropical spaces, baroque inspired
-              spaces, earthy toned spaces and for people who love a chic design
-              with a sprinkle of vintage design.
-            </Text>
-          </Stack>
-        </CardBody>
-      </Card>
+      <Grid
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          sm: "repeat(2, 1fr)",
+          md: "repeat(3, 1fr)",
+        }}
+        gap={6}
+      >
+        {items}
+      </Grid>
     </Page>
   );
 }
