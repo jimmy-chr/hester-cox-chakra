@@ -31,7 +31,21 @@
     }
   },
   "accessories": {
-    "title": "Accessories"
+    "title": "Accessories",
+    "introduction": "Assorted accessories.",
+    "picture": "picture",
+    "belt": {
+      "title": "Belt",
+      "description": "English description belt"
+    },
+    "card-holder": {
+      "title": "Card holder",
+      "description": "English description card holder"
+    },
+    "wallet": {
+      "title": "Wallet",
+      "description": "English description wallet"
+    }
   },
   "about-me": {
     "title": "About me"
