@@ -36,27 +36,35 @@ const ContactForm = () => {
     }
 
     try {
-      /*
-      // Send form data via EmailJS
-      await emailjs.send(
-        "your_serviceID", // replace with your EmailJS service ID
-        "your_templateID", // replace with your EmailJS template ID
-        formData,
-        "your_userID" // replace with your EmailJS user ID
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbwZuW27ED7ddw8iVB9ZGKYlrr40wAaapVfSBkpjkflJHYmID69MAvG8GKqvaIJf1Fc/exec",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
       );
-      */
 
-      // Show success message
-      toast({
-        title: "Message Sent",
-        description: "Your message has been sent successfully!",
-        status: "success",
-        duration: 5000,
-        isClosable: true,
-      });
+      console.log(response);
 
-      // Clear form fields
-      setFormData({ email: "", message: "", website: "" });
+      const result = await response.json();
+
+      if (result.status === "success") {
+        // Show success message
+        toast({
+          title: "Message Sent",
+          description: "Your message has been sent successfully!",
+          status: "success",
+          duration: 5000,
+          isClosable: true,
+        });
+
+        // Clear form fields
+        setFormData({ email: "", message: "", website: "" });
+      } else {
+        // Show error message if there's an issue
+        throw new Error(result.message);
+      }
     } catch (error) {
       // Show error message
       toast({
@@ -72,13 +80,12 @@ const ContactForm = () => {
 
   return (
     <Box
-      maxW="md"
-      mx="auto"
-      mt="10"
+      maxW="xl"
       p="6"
       boxShadow="lg"
       borderRadius="md"
       borderWidth="1px"
+      bgColor="#FFFFFA"
     >
       <form onSubmit={handleSubmit}>
         <FormControl id="email" mb="4" isRequired>

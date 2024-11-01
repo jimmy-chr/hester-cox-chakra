@@ -18,7 +18,7 @@ function Accessories() {
     return (
       <GridItem w="100%">
         <Card maxW="sm">
-          <CardBody>
+          <CardBody color="orange.900" bgColor={"#FFFFFA"}>
             <Image
               src={item.pictures[0].file}
               alt={`${t(`accessories.${item.id}.title`)} ${t(
