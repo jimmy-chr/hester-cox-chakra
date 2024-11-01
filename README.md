@@ -2,5 +2,5 @@
 
 Todo
 
-- responsiveness
 - paginas opvullen
+- update apiKey
