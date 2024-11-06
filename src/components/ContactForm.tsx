@@ -8,10 +8,13 @@ import {
   Textarea,
   useToast,
 } from "@chakra-ui/react";
-// import emailjs from "@emailjs/browser";
+import emailjs from "@emailjs/browser";
+import { useTranslation } from "react-i18next";
 
 const ContactForm = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
+    name: "",
     email: "",
     message: "",
     website: "",
@@ -36,41 +39,29 @@ const ContactForm = () => {
     }
 
     try {
-      const response = await fetch(
-        "https://script.google.com/macros/s/AKfycbwZuW27ED7ddw8iVB9ZGKYlrr40wAaapVfSBkpjkflJHYmID69MAvG8GKqvaIJf1Fc/exec",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(formData),
-        }
+      await emailjs.send(
+        "service_qc5a2df",
+        "template_cwnd72w",
+        formData,
+        "D2Atu_ejPg-GJeRt-"
       );
 
-      console.log(response);
+      // Show success message
+      toast({
+        title: t("contact.form.success-title"),
+        description: t("contact.form.success-description"),
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+      });
 
-      const result = await response.json();
-
-      if (result.status === "success") {
-        // Show success message
-        toast({
-          title: "Message Sent",
-          description: "Your message has been sent successfully!",
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
-
-        // Clear form fields
-        setFormData({ email: "", message: "", website: "" });
-      } else {
-        // Show error message if there's an issue
-        throw new Error(result.message);
-      }
+      // Clear form fields
+      setFormData({ name: "", email: "", message: "", website: "" });
     } catch (error) {
       // Show error message
       toast({
-        title: "Error",
-        description:
-          "There was an error sending your message. Please try again.",
+        title: t("contact.form.error-title"),
+        description: t("contact.form.error-description"),
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -88,24 +79,35 @@ const ContactForm = () => {
       bgColor="#FFFFFA"
     >
       <form onSubmit={handleSubmit}>
+        <FormControl id="name" mb="4" isRequired>
+          <FormLabel>{t("contact.form.name")}</FormLabel>
+          <Input
+            type="text"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+            placeholder={t("contact.form.name-placeholder")}
+          />
+        </FormControl>
+
         <FormControl id="email" mb="4" isRequired>
-          <FormLabel>Email Address</FormLabel>
+          <FormLabel>{t("contact.form.email")}</FormLabel>
           <Input
             type="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            placeholder="Enter your email"
+            placeholder={t("contact.form.email-placeholder")}
           />
         </FormControl>
 
         <FormControl id="message" mb="4" isRequired>
-          <FormLabel>Message</FormLabel>
+          <FormLabel>{t("contact.form.message")}</FormLabel>
           <Textarea
             name="message"
             value={formData.message}
             onChange={handleChange}
-            placeholder="Type your message here..."
+            placeholder={t("contact.form.message-placeholder")}
           />
         </FormControl>
 
@@ -119,7 +121,7 @@ const ContactForm = () => {
         </FormControl>
 
         <Button type="submit" colorScheme="teal" width="full" mt="4">
-          Send Message
+          {t("contact.form.send")}
         </Button>
       </form>
     </Box>
