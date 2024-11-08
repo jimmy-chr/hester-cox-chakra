@@ -1,12 +1,17 @@
-import { Heading, Text, Divider, Image } from "@chakra-ui/react";
+import { Heading, Text, Divider } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
 import collection from "../config/collection.json";
+import Carousel from "../components/Carousel";
 
 function Collection() {
   const { t } = useTranslation();
 
   const items = collection.map((item) => {
+    const slides = item.pictures.map((picture) => ({
+      img: picture.file,
+      alt: `${item.name} ${t("collection.picture")}`,
+    }));
     return (
       <>
         <Divider />
@@ -14,12 +19,9 @@ function Collection() {
           {item.name}
         </Heading>
         <Text>
-          <Image
+          <Carousel
+            slides={slides}
             maxW={["10em", "15em", "30em"]}
-            height="auto"
-            borderRadius="0.5em"
-            src={item.pictures[0].file}
-            alt={`${item.name} ${t("collection.picture")}`}
             float="left"
             marginRight="1em"
           />
