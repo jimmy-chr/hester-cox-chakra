@@ -118,6 +118,7 @@ const Carousel = ({ slides, maxW, float, marginRight }: CarouselProps) => {
                 src={slide.img}
                 alt={slide.alt}
                 boxSize="full"
+                height="auto"
                 backgroundSize="cover"
                 borderRadius="0.5em"
               />
