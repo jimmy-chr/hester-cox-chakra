@@ -1,4 +1,4 @@
-import { Heading, Text, Divider, Image } from "@chakra-ui/react";
+import { Heading, Text, Divider } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
 import collection from "../config/collection.json";
