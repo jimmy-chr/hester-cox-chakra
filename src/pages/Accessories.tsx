@@ -4,28 +4,26 @@ import {
   CardBody,
   Stack,
   Heading,
-  Image,
   Grid,
   GridItem,
 } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { useTranslation } from "react-i18next";
 import accessories from "../config/accessories.json";
+import Carousel from "../components/Carousel";
 
 function Accessories() {
   const { t } = useTranslation();
   const items = accessories.map((item) => {
+    const slides = item.pictures.map((picture) => ({
+      img: picture.file,
+      alt: `${t(`accessories.${item.id}.title`)} ${t("collection.picture")}`,
+    }));
     return (
-      <GridItem w="100%">
+      <GridItem w="100%" key={item.id}>
         <Card maxW="sm">
-          <CardBody color="orange.900" bgColor={"#FFFFFA"}>
-            <Image
-              src={item.pictures[0].file}
-              alt={`${t(`accessories.${item.id}.title`)} ${t(
-                "collection.picture"
-              )}`}
-              borderRadius="lg"
-            />
+          <CardBody color="orange.900" bgColor={"#FFFFFA"} borderRadius="md">
+            <Carousel slides={slides} maxW={["100%"]} />
             <Stack mt="6" spacing="3">
               <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
               <Text>{t(`accessories.${item.id}.description`)}</Text>

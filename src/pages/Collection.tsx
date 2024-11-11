@@ -1,8 +1,9 @@
-import { Heading, Text, Divider } from "@chakra-ui/react";
+import { Heading, Text, Divider, Box } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
 import collection from "../config/collection.json";
 import Carousel from "../components/Carousel";
+import React from "react";
 
 function Collection() {
   const { t } = useTranslation();
@@ -13,21 +14,23 @@ function Collection() {
       alt: `${item.name} ${t("collection.picture")}`,
     }));
     return (
-      <>
+      <React.Fragment key={item.id}>
         <Divider />
         <Heading id={item.id} as="h4" size={"lg"}>
           {item.name}
         </Heading>
-        <Text>
+        <Box>
           <Carousel
             slides={slides}
             maxW={["10em", "15em", "30em"]}
             float="left"
             marginRight="1em"
           />
-          <Trans i18nKey={`collection.${item.id}.description`} />
-        </Text>
-      </>
+          <Text>
+            <Trans i18nKey={`collection.${item.id}.description`} />
+          </Text>
+        </Box>
+      </React.Fragment>
     );
   });
 
