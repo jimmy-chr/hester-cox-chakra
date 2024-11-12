@@ -4,9 +4,15 @@ import { Trans, useTranslation } from "react-i18next";
 import collection from "../config/collection.json";
 import Carousel from "../components/Carousel";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Collection() {
   const { t } = useTranslation();
+  let navigate = useNavigate();
+
+  const goToDetails = (id: string) => {
+    navigate(`/collection/${id}`);
+  };
 
   const items = collection.map((item) => {
     const slides = item.pictures.map((picture) => ({
@@ -19,7 +25,7 @@ function Collection() {
         <Heading id={item.id} as="h4" size={"lg"}>
           {item.name}
         </Heading>
-        <Box>
+        <Box onClick={() => goToDetails(item.id)}>
           <Carousel
             slides={slides}
             maxW={["10em", "15em", "30em"]}
