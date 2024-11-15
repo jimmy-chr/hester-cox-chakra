@@ -1,6 +1,7 @@
 import { ChakraProvider, extendTheme, Flex } from "@chakra-ui/react";
 import Home from "./pages/Home";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import useScrollToTop from "./hooks/useScrollToTop";
 import Collection from "./pages/Collection";
 import Accessories from "./pages/Accessories";
 import Contact from "./pages/Contact";
@@ -16,23 +17,22 @@ const theme = extendTheme({
 });
 
 const App = () => {
+  useScrollToTop();
   return (
-    <Router>
-      <ChakraProvider theme={theme}>
-        <Flex direction="column" minHeight="100vh">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/collection" element={<Collection />} />
-            <Route path="/collection/:id" element={<CollectionDetails />} />
-            <Route path="/accessories" element={<Accessories />} />
-            <Route path="/about-me" element={<AboutMe />} />
-            <Route path="/contact" element={<Contact />} />
-            {/* Fallback Route */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Flex>
-      </ChakraProvider>
-    </Router>
+    <ChakraProvider theme={theme}>
+      <Flex direction="column" minHeight="100vh">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/collection" element={<Collection />} />
+          <Route path="/collection/:id" element={<CollectionDetails />} />
+          <Route path="/accessories" element={<Accessories />} />
+          <Route path="/about-me" element={<AboutMe />} />
+          <Route path="/contact" element={<Contact />} />
+          {/* Fallback Route */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Flex>
+    </ChakraProvider>
   );
 };
 

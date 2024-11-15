@@ -18,16 +18,20 @@
     "introduction": "My collection.",
     "picture": "picture",
     "aimant": {
-      "description": "English description Aimant"
+      "description": "English description Aimant",
+      "detail-description": "Detail description Aimant"
     },
     "maisa": {
-      "description": "English description Maisa"
+      "description": "English description Maisa",
+      "detail-description": "Detail description Maisa"
     },
     "eclair": {
-      "description": "English description Éclair"
+      "description": "English description Éclair",
+      "detail-description": "Detail description Éclair"
     },
     "dokterstas": {
-      "description": "English description Dokterstas"
+      "description": "English description Dokterstas",
+      "detail-description": "Detail description Dokterstas"
     }
   },
   "accessories": {

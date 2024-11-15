@@ -21,6 +21,9 @@ function CollectionDetails() {
       <ProductDetails
         name={collectionItem.name}
         description={t(`collection.${collectionItem.id}.description`)}
+        detailDescription={t(
+          `collection.${collectionItem.id}.detail-description`
+        )}
         pictures={pictures}
       />
     </Page>

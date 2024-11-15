@@ -4,9 +4,8 @@ Todo
 
 - collection details page
 
-* scroll to top
-* keep description on scroll
-* button contact form
+* button contact form delen met contact pagina
+* detail page link from button
 
 - accessories details page
 - breadcrumb

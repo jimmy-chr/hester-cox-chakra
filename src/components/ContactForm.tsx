@@ -72,8 +72,9 @@ const ContactForm = () => {
   return (
     <Box
       maxW="xl"
+      w="full"
       p="6"
-      boxShadow="lg"
+      boxShadow="md"
       borderRadius="md"
       borderWidth="1px"
       bgColor="#FFFFFA"
