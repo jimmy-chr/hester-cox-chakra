@@ -8,11 +8,6 @@ import {
   VStack,
   HStack,
   Select,
-  NumberInput,
-  NumberInputField,
-  NumberInputStepper,
-  NumberIncrementStepper,
-  NumberDecrementStepper,
 } from "@chakra-ui/react";
 import Page from "../../components/Page";
 import { useParams } from "react-router-dom";
@@ -22,15 +17,17 @@ function Details() {
   const { id } = useParams();
   // Placeholder product data
   const product = {
-    name: "Premium Yoga Mat",
-    price: 59.99,
+    name: "Product Name Placeholder",
     description:
-      "Eco-friendly, durable, and comfortable yoga mat for all types of workouts.",
-    colors: ["Blue", "Green", "Purple"],
-    sizes: ["Small", "Medium", "Large"],
-    image: "https://via.placeholder.com/400x400", // Placeholder image, replace with product image URL
+      "This is a placeholder description for the product. Add details about the product's features, materials, and benefits here.",
+    images: [
+      "https://via.placeholder.com/400x400", // Placeholder for image 1
+      "https://via.placeholder.com/400x400", // Placeholder for image 2
+      "https://via.placeholder.com/400x400", // Placeholder for image 3
+    ],
+    colors: ["Color 1", "Color 2", "Color 3"],
+    sizes: ["Size 1", "Size 2", "Size 3"],
   };
-
   return (
     <Page titleId="home" titleKey="home.title">
       <Flex
@@ -39,19 +36,26 @@ function Details() {
         maxWidth="1200px"
         mx="auto"
       >
-        {/* Left Side: Product Image */}
+        {/* Left Side: Product Images */}
         <Box flex="1" p={4}>
-          <Image src={product.image} alt={product.name} borderRadius="md" />
+          <VStack spacing={4}>
+            {product.images.map((img, index) => (
+              <Image
+                key={index}
+                src={img}
+                alt={`Product image ${index + 1}`}
+                borderRadius="md"
+                boxShadow="md"
+              />
+            ))}
+          </VStack>
         </Box>
 
         {/* Right Side: Product Details */}
         <VStack flex="1" p={4} align="start" spacing={6}>
-          {/* Product Name and Price */}
+          {/* Product Name */}
           <Text fontSize="2xl" fontWeight="bold">
             {product.name}
-          </Text>
-          <Text fontSize="xl" color="gray.600">
-            ${product.price.toFixed(2)}
           </Text>
 
           {/* Product Description */}
@@ -79,18 +83,6 @@ function Details() {
                 </option>
               ))}
             </Select>
-          </HStack>
-
-          {/* Quantity Selector */}
-          <HStack spacing={4} align="center">
-            <Text>Quantity:</Text>
-            <NumberInput defaultValue={1} min={1} max={10} w="100px">
-              <NumberInputField />
-              <NumberInputStepper>
-                <NumberIncrementStepper />
-                <NumberDecrementStepper />
-              </NumberInputStepper>
-            </NumberInput>
           </HStack>
 
           {/* Add to Cart Button */}
