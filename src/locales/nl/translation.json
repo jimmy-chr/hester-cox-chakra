@@ -17,6 +17,7 @@
     "title": "Collectie",
     "introduction": "Mijn collectie.",
     "picture": "foto",
+    "more-details": "Meer details ...",
     "aimant": {
       "description": "Nederlandse omschrijving Aimant",
       "detail-description": "Detail omschrijving Aimant"
@@ -70,8 +71,12 @@
       "email-placeholder": "Geef hier je email adres in",
       "message": "Bericht:",
       "message-placeholder": "Geef hier je bericht in...",
-      "send": "Bericht versturen"
+      "send": "Bericht versturen",
+      "cancel": "Annuleren"
     }
+  },
+  "product-details": {
+    "info-request": "Informatie vragen"
   },
   "not-found": {
     "title": "Niet gevonden"

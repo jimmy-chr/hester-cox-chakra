@@ -17,6 +17,7 @@
     "title": "Collection",
     "introduction": "My collection.",
     "picture": "picture",
+    "more-details": "More details ...",
     "aimant": {
       "description": "English description Aimant",
       "detail-description": "Detail description Aimant"
@@ -70,8 +71,12 @@
       "email-placeholder": "Enter your email address here",
       "message": "Bericht:",
       "message-placeholder": "Enter your message here...",
-      "send": "Send message"
+      "send": "Send message",
+      "cancel": "Cancel"
     }
+  },
+  "product-details": {
+    "info-request": "Request information"
   },
   "not-found": {
     "title": "Not found"

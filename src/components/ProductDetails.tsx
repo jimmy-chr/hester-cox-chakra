@@ -1,15 +1,7 @@
-import {
-  Box,
-  Flex,
-  Image,
-  Text,
-  Button,
-  VStack,
-  Input,
-  Textarea,
-} from "@chakra-ui/react";
+import { Box, Flex, Image, Text, Button, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import ContactForm from "./ContactForm";
+import { useTranslation } from "react-i18next";
 
 type ProductDetailsProps = {
   name: string;
@@ -24,6 +16,7 @@ function ProductDetails({
   detailDescription,
   pictures,
 }: ProductDetailsProps) {
+  const { t } = useTranslation();
   const [isFormVisible, setIsFormVisible] = useState(false);
   const handleMoreInfoClick = () => {
     setIsFormVisible(!isFormVisible);
@@ -69,42 +62,17 @@ function ProductDetails({
         {/* More Information Button */}
         {!isFormVisible && (
           <Button colorScheme="teal" w="full" onClick={handleMoreInfoClick}>
-            More Information
+            {t("product-details.info-request")}
           </Button>
         )}
 
         {/* More Information Form */}
         {isFormVisible && (
           <>
-            <ContactForm />
-            <Box
-              borderWidth="1px"
-              borderRadius="md"
-              padding="1em"
-              marginTop="1em"
-              w="full"
-              boxShadow="md"
-              bgColor="#FFFFFA"
-            >
-              <VStack spacing={4} align="start">
-                <Text fontSize="lg" fontWeight="bold">
-                  Request More Information
-                </Text>
-                <Input placeholder="Your Name" />
-                <Input placeholder="Your Email" type="email" />
-                <Textarea placeholder="Your Message" />
-                <Button colorScheme="teal" w="full">
-                  Submit
-                </Button>
-                <Button
-                  colorScheme="teal"
-                  w="full"
-                  onClick={handleMoreInfoClick}
-                >
-                  Cancel
-                </Button>
-              </VStack>
-            </Box>
+            <ContactForm
+              onCancelClick={handleMoreInfoClick}
+              origin={`${name} pagina`}
+            />
           </>
         )}
       </VStack>

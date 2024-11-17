@@ -11,13 +11,19 @@ import {
 import emailjs from "@emailjs/browser";
 import { useTranslation } from "react-i18next";
 
-const ContactForm = () => {
+interface ContactFormProps {
+  onCancelClick?: () => void;
+  origin: string;
+}
+
+const ContactForm = ({ onCancelClick, origin }: ContactFormProps) => {
   const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
     website: "",
+    origin,
   });
   const toast = useToast();
 
@@ -56,7 +62,7 @@ const ContactForm = () => {
       });
 
       // Clear form fields
-      setFormData({ name: "", email: "", message: "", website: "" });
+      setFormData({ name: "", email: "", message: "", website: "", origin });
     } catch (error) {
       // Show error message
       toast({
@@ -90,7 +96,6 @@ const ContactForm = () => {
             placeholder={t("contact.form.name-placeholder")}
           />
         </FormControl>
-
         <FormControl id="email" mb="4" isRequired>
           <FormLabel>{t("contact.form.email")}</FormLabel>
           <Input
@@ -101,7 +106,6 @@ const ContactForm = () => {
             placeholder={t("contact.form.email-placeholder")}
           />
         </FormControl>
-
         <FormControl id="message" mb="4" isRequired>
           <FormLabel>{t("contact.form.message")}</FormLabel>
           <Textarea
@@ -111,7 +115,6 @@ const ContactForm = () => {
             placeholder={t("contact.form.message-placeholder")}
           />
         </FormControl>
-
         <FormControl id="website" display="none">
           <Input
             type="text"
@@ -120,10 +123,14 @@ const ContactForm = () => {
             onChange={handleChange}
           />
         </FormControl>
-
         <Button type="submit" colorScheme="teal" width="full" mt="4">
           {t("contact.form.send")}
         </Button>
+        {onCancelClick && (
+          <Button colorScheme="teal" w="full" mt="4" onClick={onCancelClick}>
+            {t("contact.form.cancel")}
+          </Button>
+        )}
       </form>
     </Box>
   );
