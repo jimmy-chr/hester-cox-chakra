@@ -17,17 +17,22 @@
     "title": "Collectie",
     "introduction": "Mijn collectie.",
     "picture": "foto",
+    "more-details": "Meer details ...",
     "aimant": {
-      "description": "Nederlandse omschrijving Aimant"
+      "description": "Nederlandse omschrijving Aimant",
+      "detail-description": "Detail omschrijving Aimant"
     },
     "maisa": {
-      "description": "Nederlandse omschrijving Maisa"
+      "description": "Nederlandse omschrijving Maisa",
+      "detail-description": "Detail omschrijving Maisa"
     },
     "eclair": {
-      "description": "Nederlandse omschrijving Éclair"
+      "description": "Nederlandse omschrijving Éclair",
+      "detail-description": "Detail omschrijving Éclair"
     },
     "dokterstas": {
-      "description": "Nederlandse omschrijving Dokterstas"
+      "description": "Nederlandse omschrijving Dokterstas",
+      "detail-description": "Detail omschrijving Dokterstas"
     }
   },
   "accessories": {
@@ -66,8 +71,12 @@
       "email-placeholder": "Geef hier je email adres in",
       "message": "Bericht:",
       "message-placeholder": "Geef hier je bericht in...",
-      "send": "Bericht versturen"
+      "send": "Bericht versturen",
+      "cancel": "Annuleren"
     }
+  },
+  "product-details": {
+    "info-request": "Informatie vragen"
   },
   "not-found": {
     "title": "Niet gevonden"

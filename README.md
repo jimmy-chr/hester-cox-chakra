@@ -2,5 +2,8 @@
 
 Todo
 
-- collection details page
+- accessories details page
+- breadcrumb
+- bugs / responsiveness
 - gradient
+- update chakra 3.0

@@ -8,7 +8,7 @@ function Contact() {
   return (
     <Page titleId="contact" titleKey="contact.title">
       <Text>{t("contact.introduction")}</Text>
-      <ContactForm />
+      <ContactForm origin="contact pagina" />
     </Page>
   );
 }

@@ -1,12 +1,18 @@
-import { Heading, Text, Divider, Box } from "@chakra-ui/react";
+import { Heading, Text, Divider, Box, Button } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
 import collection from "../config/collection.json";
 import Carousel from "../components/Carousel";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Collection() {
   const { t } = useTranslation();
+  let navigate = useNavigate();
+
+  const goToDetails = (id: string) => {
+    navigate(`/collection/${id}`);
+  };
 
   const items = collection.map((item) => {
     const slides = item.pictures.map((picture) => ({
@@ -29,6 +35,13 @@ function Collection() {
           <Text>
             <Trans i18nKey={`collection.${item.id}.description`} />
           </Text>
+          <Button
+            colorScheme="teal"
+            w="full"
+            onClick={() => goToDetails(item.id)}
+          >
+            {t("collection.more-details")}
+          </Button>
         </Box>
       </React.Fragment>
     );

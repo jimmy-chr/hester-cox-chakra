@@ -17,17 +17,22 @@
     "title": "Collection",
     "introduction": "My collection.",
     "picture": "picture",
+    "more-details": "More details ...",
     "aimant": {
-      "description": "English description Aimant"
+      "description": "English description Aimant",
+      "detail-description": "Detail description Aimant"
     },
     "maisa": {
-      "description": "English description Maisa"
+      "description": "English description Maisa",
+      "detail-description": "Detail description Maisa"
     },
     "eclair": {
-      "description": "English description Éclair"
+      "description": "English description Éclair",
+      "detail-description": "Detail description Éclair"
     },
     "dokterstas": {
-      "description": "English description Dokterstas"
+      "description": "English description Dokterstas",
+      "detail-description": "Detail description Dokterstas"
     }
   },
   "accessories": {
@@ -66,8 +71,12 @@
       "email-placeholder": "Enter your email address here",
       "message": "Bericht:",
       "message-placeholder": "Enter your message here...",
-      "send": "Send message"
+      "send": "Send message",
+      "cancel": "Cancel"
     }
+  },
+  "product-details": {
+    "info-request": "Request information"
   },
   "not-found": {
     "title": "Not found"
