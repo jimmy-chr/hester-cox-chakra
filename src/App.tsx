@@ -8,6 +8,7 @@ import Contact from "./pages/Contact";
 import AboutMe from "./pages/AboutMe";
 import NotFound from "./pages/NotFound";
 import CollectionDetails from "./pages/collection/CollectionDetails";
+import AccessoryDetails from "./pages/collection/AccessoryDetails";
 
 const theme = extendTheme({
   fonts: {
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/collection" element={<Collection />} />
           <Route path="/collection/:id" element={<CollectionDetails />} />
           <Route path="/accessories" element={<Accessories />} />
+          <Route path="/accessories/:id" element={<AccessoryDetails />} />
           <Route path="/about-me" element={<AboutMe />} />
           <Route path="/contact" element={<Contact />} />
           {/* Fallback Route */}

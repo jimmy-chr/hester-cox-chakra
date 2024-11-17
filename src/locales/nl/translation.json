@@ -41,15 +41,18 @@
     "picture": "foto",
     "belt": {
       "title": "Riem",
-      "description": "Nederlandse omschrijving riem"
+      "description": "Nederlandse omschrijving riem",
+      "detail-description": "Detail omschrijving riem"
     },
     "card-holder": {
       "title": "Kaartenhouder",
-      "description": "Nederlandse omschrijving kaartenhouder"
+      "description": "Nederlandse omschrijving kaartenhouder",
+      "detail-description": "Detail omschrijving kaartenhouder"
     },
     "wallet": {
       "title": "Portemonnee",
-      "description": "Nederlandse omschrijving portemonnee"
+      "description": "Nederlandse omschrijving portemonnee",
+      "detail-description": "Detail omschrijving portemonnee"
     }
   },
   "about-me": {
