@@ -6,14 +6,21 @@ import {
   Heading,
   Grid,
   GridItem,
+  Button,
 } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { useTranslation } from "react-i18next";
 import accessories from "../config/accessories.json";
 import Carousel from "../components/Carousel";
+import { useNavigate } from "react-router-dom";
 
 function Accessories() {
   const { t } = useTranslation();
+  let navigate = useNavigate();
+  const goToDetails = (id: string) => {
+    navigate(`/accessories/${id}`);
+  };
+
   const items = accessories.map((item) => {
     const slides = item.pictures.map((picture) => ({
       img: picture.file,
@@ -27,6 +34,13 @@ function Accessories() {
             <Stack mt="6" spacing="3">
               <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
               <Text>{t(`accessories.${item.id}.description`)}</Text>
+              <Button
+                colorScheme="teal"
+                w="full"
+                onClick={() => goToDetails(item.id)}
+              >
+                {t("collection.more-details")}
+              </Button>
             </Stack>
           </CardBody>
         </Card>
