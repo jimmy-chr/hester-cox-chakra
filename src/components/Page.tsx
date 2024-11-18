@@ -2,6 +2,7 @@ import { Box, Heading, Stack, Center } from "@chakra-ui/react";
 import { useTranslation } from "react-i18next";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import DynamicBreadcrumb from "./DynamicBreadcrumb";
 
 interface PageProps {
   children: React.ReactNode;
@@ -22,6 +23,7 @@ const Page: React.FC<PageProps> = ({
         <Center>
           <Stack spacing={"1em"} maxWidth="60em" width="60em">
             <Box>
+              <DynamicBreadcrumb />
               <Heading id={titleId} as="h3">
                 {t(titleKey)}
               </Heading>
