@@ -13,6 +13,7 @@ import collection from "../config/collection.json";
 import Carousel from "../components/Carousel";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function Collection() {
   const { t } = useTranslation();
@@ -47,7 +48,9 @@ function Collection() {
               <Trans i18nKey={`collection.${item.id}.description`} />
             </Text>
             <Button
-              colorScheme="teal"
+              colorScheme="green"
+              bgColor={"green.700"}
+              textColor={"orange.50"}
               w="full"
               onClick={() => goToDetails(item.id)}
             >
@@ -59,8 +62,13 @@ function Collection() {
     );
   });
 
+  const breadcrumb: BreadcrumbProps = {
+    titleId: "collection",
+    titleKey: "collection.title",
+  };
+
   return (
-    <Page titleId="collection" titleKey="collection.title">
+    <Page breadcrumb={breadcrumb}>
       <Text>{t("collection.introduction")}</Text>
       {items}
     </Page>

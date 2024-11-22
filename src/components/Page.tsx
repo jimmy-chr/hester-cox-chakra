@@ -1,31 +1,28 @@
-import { Box, Heading, Stack, Center } from "@chakra-ui/react";
-import { useTranslation } from "react-i18next";
+import { Box, Stack, Center } from "@chakra-ui/react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Breadcrumb, { BreadcrumbProps } from "./Breadcrumb";
 
 interface PageProps {
   children: React.ReactNode;
-  titleId: string;
-  titleKey: string;
+  breadcrumb: BreadcrumbProps;
 }
-const Page: React.FC<PageProps> = ({
-  children,
-  titleId,
-  titleKey,
-}: PageProps) => {
-  const { t } = useTranslation();
 
+const Page: React.FC<PageProps> = ({ children, breadcrumb }: PageProps) => {
+  const { titleId, titleKey, subTitleId, subTitleKey, titleLink } = breadcrumb;
   return (
     <>
       <Header />
       <Box flex="1" p={["1em", "2em"]} bg="orange.50" color="orange.900">
         <Center>
           <Stack spacing={"1em"} maxWidth="60em" width="60em">
-            <Box>
-              <Heading id={titleId} as="h3">
-                {t(titleKey)}
-              </Heading>
-            </Box>
+            <Breadcrumb
+              titleId={titleId}
+              titleKey={titleKey}
+              subTitleId={subTitleId}
+              subTitleKey={subTitleKey}
+              titleLink={titleLink}
+            />
             {children}
           </Stack>
         </Center>

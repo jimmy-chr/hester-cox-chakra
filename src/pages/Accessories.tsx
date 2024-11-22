@@ -13,6 +13,7 @@ import { useTranslation } from "react-i18next";
 import accessories from "../config/accessories.json";
 import Carousel from "../components/Carousel";
 import { useNavigate } from "react-router-dom";
+import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function Accessories() {
   const { t } = useTranslation();
@@ -35,7 +36,9 @@ function Accessories() {
               <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
               <Text>{t(`accessories.${item.id}.description`)}</Text>
               <Button
-                colorScheme="teal"
+                colorScheme="green"
+                bgColor={"green.700"}
+                textColor={"orange.50"}
                 w="full"
                 onClick={() => goToDetails(item.id)}
               >
@@ -48,8 +51,13 @@ function Accessories() {
     );
   });
 
+  const breadcrumb: BreadcrumbProps = {
+    titleId: "accessories",
+    titleKey: "accessories.title",
+  };
+
   return (
-    <Page titleId="accessories" titleKey="accessories.title">
+    <Page breadcrumb={breadcrumb}>
       <Text>{t("accessories.introduction")}</Text>
       <Grid
         templateColumns={{

@@ -1,10 +1,16 @@
 import { Text, Image } from "@chakra-ui/react";
 import { Trans } from "react-i18next";
 import Page from "../components/Page";
+import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function Home() {
+  const breadcrumb: BreadcrumbProps = {
+    titleId: "home",
+    titleKey: "home.title",
+  };
+
   return (
-    <Page titleId="home" titleKey="home.title">
+    <Page breadcrumb={breadcrumb}>
       <Text>
         <Image
           maxW={["10em", "15em", "30em"]}

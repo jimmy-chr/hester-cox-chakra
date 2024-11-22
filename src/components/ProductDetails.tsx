@@ -61,7 +61,13 @@ function ProductDetails({
 
         {/* More Information Button */}
         {!isFormVisible && (
-          <Button colorScheme="teal" w="full" onClick={handleMoreInfoClick}>
+          <Button
+            colorScheme="green"
+            bgColor={"green.700"}
+            textColor={"orange.50"}
+            w="full"
+            onClick={handleMoreInfoClick}
+          >
             {t("product-details.info-request")}
           </Button>
         )}
