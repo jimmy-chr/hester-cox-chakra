@@ -15,11 +15,12 @@ function Header() {
           width={"80em"}
           maxWidth={"80em"}
         >
-          <Stack direction={"column"}>
-            <Link
-              as={ReactRouterLink}
-              to="/"
-              style={{ textDecoration: "none" }}
+          {/* Title and Subtitle */}
+          <Link as={ReactRouterLink} to="/" style={{ textDecoration: "none" }}>
+            <Flex
+              flexDirection={"column"}
+              justifyContent="space-between"
+              height={"5em"} // Set a fixed height for proper alignment
             >
               <Heading as="h1" size="lg" paddingBottom={"0.5em"}>
                 {t("header.title")}
@@ -27,9 +28,14 @@ function Header() {
               <Heading as="h2" size="md">
                 {t("header.subtitle")}
               </Heading>
-            </Link>
-          </Stack>
-          <Flex flexDirection="column" align="flex-end">
+            </Flex>
+          </Link>
+          <Flex
+            flexDirection="column"
+            justifyContent="space-between"
+            align="flex-end"
+            height={"5em"} // Set a fixed height for proper alignment
+          >
             <LanguageSelect />
             <Navigation />
           </Flex>
