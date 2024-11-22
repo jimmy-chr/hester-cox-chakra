@@ -2,7 +2,6 @@
 
 Todo
 
-- breadcrumb
 - not found pagina
 - bugs / responsiveness
 - gradient

@@ -123,11 +123,25 @@ const ContactForm = ({ onCancelClick, origin }: ContactFormProps) => {
             onChange={handleChange}
           />
         </FormControl>
-        <Button type="submit" colorScheme="teal" width="full" mt="4">
+        <Button
+          type="submit"
+          colorScheme="green"
+          bgColor={"green.700"}
+          textColor={"orange.50"}
+          width="full"
+          mt="4"
+        >
           {t("contact.form.send")}
         </Button>
         {onCancelClick && (
-          <Button colorScheme="teal" w="full" mt="4" onClick={onCancelClick}>
+          <Button
+            colorScheme="green"
+            bgColor={"green.700"}
+            textColor={"orange.50"}
+            w="full"
+            mt="4"
+            onClick={onCancelClick}
+          >
             {t("contact.form.cancel")}
           </Button>
         )}

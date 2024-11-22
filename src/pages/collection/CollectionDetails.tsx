@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import collection from "../../config/collection.json";
 import ProductDetails from "../../components/ProductDetails";
 import { useTranslation } from "react-i18next";
+import { BreadcrumbProps } from "../../components/Breadcrumb";
 
 function CollectionDetails() {
   const { t } = useTranslation();
@@ -16,8 +17,16 @@ function CollectionDetails() {
     alt: `${collectionItem.name} ${t("collection.picture")}`,
   }));
 
+  const breadcrumb: BreadcrumbProps = {
+    titleId: "collection",
+    titleKey: "collection.title",
+    subTitleId: "collection-item",
+    subTitleKey: collectionItem.name,
+    titleLink: "/collection",
+  };
+
   return (
-    <Page titleId="collection" titleKey="collection.title">
+    <Page breadcrumb={breadcrumb}>
       <ProductDetails
         name={collectionItem.name}
         description={t(`collection.${collectionItem.id}.description`)}
