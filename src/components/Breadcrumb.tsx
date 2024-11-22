@@ -21,12 +21,16 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
   return (
     <Box
       display="flex"
-      flexDirection={{ base: "column", md: "row" }}
-      alignItems={{ base: "flex-start", md: "center" }}
-      gap="1em"
+      flexDirection={"row"}
+      alignItems={"center"}
+      gap={{ base: "0.5em", md: "1em" }}
     >
       {subTitleKey ? (
-        <Box display="flex" flexDirection="row" gap="1em">
+        <Box
+          display="flex"
+          flexDirection="row"
+          gap={{ base: "0.5em", md: "1em" }}
+        >
           <Link
             href={titleLink}
             id={titleId}

@@ -41,15 +41,21 @@ function ProductDetails({
       {/* Right Side: Product Details */}
       <VStack
         flex="1"
-        paddingLeft={["0em", "0em", "2em"]}
+        paddingLeft={{ base: "0em", md: "2em" }}
         position="sticky"
         top="1rem"
         alignSelf="start"
         zIndex={10}
         align="start"
+        width="full"
       >
         {/* Product Name */}
-        <Text fontSize="2xl" fontWeight="bold" paddingBottom={"1em"}>
+        <Text
+          fontSize="2xl"
+          fontWeight="bold"
+          paddingBottom={"1em"}
+          paddingTop={{ base: "1em", md: "0em" }}
+        >
           {name}
         </Text>
 
@@ -65,7 +71,7 @@ function ProductDetails({
             colorScheme="green"
             bgColor={"green.700"}
             textColor={"orange.50"}
-            w="full"
+            width={{ base: "full", md: "20em" }}
             onClick={handleMoreInfoClick}
           >
             {t("product-details.info-request")}

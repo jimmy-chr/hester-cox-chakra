@@ -6,6 +6,7 @@ import {
   Button,
   Flex,
   VStack,
+  Center,
 } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
@@ -34,28 +35,32 @@ function Collection() {
         <Heading id={item.id} as="h4" size={"lg"}>
           {item.name}
         </Heading>
-        <Flex direction={{ base: "column", sm: "row" }}>
+        <Flex
+          direction={{ base: "column", md: "row" }}
+          gap={4} // Adds spacing between the carousel and text content
+        >
           <Box width={"full"}>
-            <Carousel
-              slides={slides}
-              maxW={["10em", "15em", "30em"]}
-              float="left"
-              marginRight="1em"
-            />
+            <Center>
+              <Carousel slides={slides} maxW={["30em"]} />
+            </Center>
           </Box>
-          <VStack width={"full"}>
+          <VStack width={"full"} alignItems={"flex-start"}>
             <Text>
               <Trans i18nKey={`collection.${item.id}.description`} />
             </Text>
-            <Button
-              colorScheme="green"
-              bgColor={"green.700"}
-              textColor={"orange.50"}
-              w="full"
-              onClick={() => goToDetails(item.id)}
-            >
-              {t("collection.more-details")}
-            </Button>
+            <Box width={"full"}>
+              <Center>
+                <Button
+                  colorScheme="green"
+                  bgColor={"green.700"}
+                  textColor={"orange.50"}
+                  width={{ base: "full", md: "20em" }}
+                  onClick={() => goToDetails(item.id)}
+                >
+                  {t("collection.more-details")}
+                </Button>
+              </Center>
+            </Box>
           </VStack>
         </Flex>
       </React.Fragment>
