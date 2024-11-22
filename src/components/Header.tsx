@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Link, Stack, Center } from "@chakra-ui/react";
+import { Box, Flex, Heading, Link, Center } from "@chakra-ui/react";
 import { LanguageSelect } from "./LanguageSelect";
 import { useTranslation } from "react-i18next";
 import { Link as ReactRouterLink } from "react-router-dom";
@@ -30,6 +30,7 @@ function Header() {
               </Heading>
             </Flex>
           </Link>
+          {/* Language Select and Navigation */}
           <Flex
             flexDirection="column"
             justifyContent="space-between"
