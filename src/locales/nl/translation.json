@@ -82,6 +82,9 @@
     "info-request": "Informatie vragen"
   },
   "not-found": {
-    "title": "Niet gevonden"
+    "title": "404 Pagina niet gevonden",
+    "introduction": "Oeps! De pagina die je zoekt bestaat niet.",
+    "details": "Deze is misschien verplaatst of verwijderd. Probeer terug te gaan naar de startpagina.",
+    "link-home": "Ga naar Startpagina"
   }
 }

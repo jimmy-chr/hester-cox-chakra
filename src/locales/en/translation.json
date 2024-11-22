@@ -82,6 +82,9 @@
     "info-request": "Request information"
   },
   "not-found": {
-    "title": "Not found"
+    "title": "404 Page not found",
+    "introduction": "Oops! The page you're looking for doesn't exist.",
+    "details": "It might have been moved or deleted. Try going back to the homepage.",
+    "link-home": "Go to Homepage"
   }
 }
