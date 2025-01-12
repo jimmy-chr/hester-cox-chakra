@@ -12,6 +12,18 @@
     ]
   },
   {
+    "id": "aimant-small",
+    "name": "Aimant klein",
+    "pictures": [
+      {
+        "file": "/assets/img-collection/aimant-klein1.jpg"
+      },
+      {
+        "file": "/assets/img-collection/aimant-klein2.jpg"
+      }
+    ]
+  },
+  {
     "id": "maisa",
     "name": "Maisa",
     "pictures": [

@@ -1,7 +1,7 @@
 import { Box, Flex, Image, Text, Button, VStack } from "@chakra-ui/react";
 import { useState } from "react";
 import ContactForm from "./ContactForm";
-import { useTranslation } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 
 type ProductDetailsProps = {
   name: string;
@@ -60,10 +60,14 @@ function ProductDetails({
         </Text>
 
         {/* Product Description */}
-        <Text paddingBottom={"1em"}>{description}</Text>
+        <Box paddingBottom={"1em"}>
+          <Trans i18nKey={description} />
+        </Box>
 
         {/* Product Detail Description */}
-        <Text paddingBottom={"1em"}>{detailDescription}</Text>
+        <Box paddingBottom={"1em"}>
+          <Trans i18nKey={detailDescription} />
+        </Box>
 
         {/* More Information Button */}
         {!isFormVisible && (
