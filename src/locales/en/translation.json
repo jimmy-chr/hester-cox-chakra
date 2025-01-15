@@ -6,6 +6,7 @@
   "menu": {
     "collection": "Collection",
     "accessories": "Accessories",
+    "care-maintenance": "Care and maintenance",
     "about-me": "About me",
     "contact": "Contact"
   },
@@ -30,13 +31,17 @@
       "description": "A playful handbag in supple vegetable tanned leather. The bag closes with a flap that contains two blind magnets. The bag is light and super handy for daily use. You can choose between a small and medium version. A zippered bag can be incorporated upon request. The strap is attached to the bag in 3 different ways.<br><br>1. at fixed length<br>2. one side fixed and the other adjustable with gun buttons<br>3. adjustable on both sides with gun buttons",
       "detail-description": "Dimensions Maisa small: W 24 cm - H 16 cm - D 11 cm (narrower)<br><br>Directly available in<br>• pink with matt silver fittings and inner pocket with zipper, adjustable strap on one side: 96cm up to 101cm (can be adjusted to your preference)<br>310 euros<br>• natural with red accents and silver-colored fittings, fixed belt of 100cm (can be adjusted to wish)<br>275 euro<br><br>Dimensions Maisa medium: W 26.50 cm - H 20 cm - D 11 cm (tapering)<br><br>Color chart Maisa: vegetable tanned leather type 'Vegline '<br>bottle green - soft pink - emerald green - chocolate brown - rust - mimosa (natural)<br><br>other colors/leather types on request"
     },
+    "hahahandtas": {
+      "description": "This handbag combines features of both the Aimant and the Maisa. It is made of sturdy saddle leather and closes with a luxurious Excella zipper. She got her name thanks to the letter H with which the loops in the bag are incorporated. This handbag is basic (sleek shape and no inside pockets) and luxurious at the same time thanks to the attention to detail and the gold zipper.",
+      "detail-description": "Dimensions W 26 cm - H 20 cm - D 10 cm (narrower at the top)<br><br>Available to order in green, brown, petrol or pink<br><br>Price on request"
+    },
     "eclair": {
       "description": "English description Éclair",
       "detail-description": "Detail description Éclair"
     },
     "dokterstas": {
-      "description": "English description Dokterstas",
-      "detail-description": "Detail description Dokterstas"
+      "description": "This is a real classic among handbags. The bag owes its typical shape to the curved ribs with which the bag closes.",
+      "detail-description": "I only make the doctor's bag to order. Together we will go over all the details of your custom version and then I will make it especially for you."
     }
   },
   "accessories": {
@@ -44,9 +49,9 @@
     "introduction": "Assorted accessories.",
     "picture": "picture",
     "belt": {
-      "title": "Belt",
-      "description": "English description belt",
-      "detail-description": "Detail description belt"
+      "title": "Belt in harness leather",
+      "description": "Craftsmanship and simplicity... these words tell everything about the belt. This belt is made from one layer of thick saddle leather and is sewn by hand. My belts are characterized by the asymmetrical punch.",
+      "detail-description": "The buckles are of very good quality and a belt will last for years. I only make these belts to size. Please provide the correct circumference and indicate whether you close the belts to the left or to the right (from your own point of view). Due to the labor-intensive nature (manual polishing of the saddle leather), the number of belts I make per month is limited.<br><br>A custom belt costs 120 euros."
     },
     "card-holder": {
       "title": "Card holder",
@@ -54,9 +59,9 @@
       "detail-description": "Detail description card holder"
     },
     "wallet": {
-      "title": "Wallet",
-      "description": "English description wallet",
-      "detail-description": "Detail description wallet"
+      "title": "Wallet Jade",
+      "description": "A handy and compact wallet for both cards and change. Made of vegetable tanned leather (55 euros) or steel furniture leather (40 euros)",
+      "detail-description": "color chart vegetable tanned leather type 'Vegline'<br>bottle green - soft pink - emerald green - chocolate brown - rust - mimosa (natural)"
     }
   },
   "about-me": {

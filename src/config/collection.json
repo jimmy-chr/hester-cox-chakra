@@ -39,6 +39,18 @@
     ]
   },
   {
+    "id": "hahahandtas",
+    "name": "HaHaHandtas",
+    "pictures": [
+      {
+        "file": "/assets/img-collection/hahahandtas1.jpg"
+      },
+      {
+        "file": "/assets/img-collection/hahahandtas2.jpg"
+      }
+    ]
+  },
+  {
     "id": "eclair",
     "name": "Éclair",
     "pictures": [
