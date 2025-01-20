@@ -17,7 +17,7 @@ import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function Accessories() {
   const { t } = useTranslation();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const goToDetails = (id: string) => {
     navigate(`/accessories/${id}`);
   };

@@ -21,6 +21,7 @@ function Navigation() {
   const links = [
     { name: t("menu.collection"), path: "/collection" },
     { name: t("menu.accessories"), path: "/accessories" },
+    { name: t("menu.care-maintenance"), path: "/care-maintenance" },
     { name: t("menu.about-me"), path: "/about-me" },
     { name: t("menu.contact"), path: "/contact" },
   ];

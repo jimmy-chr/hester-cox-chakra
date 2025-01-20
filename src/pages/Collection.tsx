@@ -18,7 +18,7 @@ import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function Collection() {
   const { t } = useTranslation();
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const goToDetails = (id: string) => {
     navigate(`/collection/${id}`);
@@ -45,7 +45,7 @@ function Collection() {
             </Center>
           </Box>
           <VStack width={"full"} alignItems={"flex-start"}>
-            <Text>
+            <Text paddingBottom={"1em"}>
               <Trans i18nKey={`collection.${item.id}.description`} />
             </Text>
             <Box width={"full"}>
@@ -74,7 +74,7 @@ function Collection() {
 
   return (
     <Page breadcrumb={breadcrumb}>
-      <Text>{t("collection.introduction")}</Text>
+      <Trans i18nKey="collection.introduction" />
       {items}
     </Page>
   );

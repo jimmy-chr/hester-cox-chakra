@@ -12,6 +12,18 @@
     ]
   },
   {
+    "id": "aimant-small",
+    "name": "Aimant klein",
+    "pictures": [
+      {
+        "file": "/assets/img-collection/aimant-klein1.jpg"
+      },
+      {
+        "file": "/assets/img-collection/aimant-klein2.jpg"
+      }
+    ]
+  },
+  {
     "id": "maisa",
     "name": "Maisa",
     "pictures": [
@@ -23,6 +35,18 @@
       },
       {
         "file": "/assets/img-collection/maisa3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "hahahandtas",
+    "name": "HaHaHandtas",
+    "pictures": [
+      {
+        "file": "/assets/img-collection/hahahandtas1.jpg"
+      },
+      {
+        "file": "/assets/img-collection/hahahandtas2.jpg"
       }
     ]
   },
