@@ -2,7 +2,6 @@
 
 Todo
 
-- content
 - show/hide in accessories and collection
 - translation in collection title like accessories
 - verzorging en onderhoud page

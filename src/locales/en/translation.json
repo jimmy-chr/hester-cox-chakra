@@ -65,9 +65,9 @@
     }
   },
   "about-me": {
-    "title": "About me",
-    "introduction1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sed risus ultricies tristique nulla aliquet enim tortor at.<br><br>Sagittis id consectetur purus ut faucibus pulvinar elementum. Accumsan tortor posuere ac ut consequat semper viverra nam libero. Lacus viverra vitae congue eu. Sagittis id consectetur purus ut faucibus pulvinar elementum integer enim. Aliquam sem fringilla ut morbi tincidunt augue interdum velit.<br><br>Tellus molestie nunc non blandit massa.",
-    "introduction2": "Vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt. Tortor posuere ac ut consequat semper viverra nam. Lectus vestibulum mattis ullamcorper velit sed ullamcorper morbi tincidunt. Eget nulla facilisi etiam dignissim. Aliquet risus feugiat in ante metus. Hendrerit dolor magna eget est. Nibh cras pulvinar mattis nunc se blandit. Senectus et netus et malesuada fames ac turpis. Quis ipsum suspendisse ultrices gravida."
+    "title": "The creator",
+    "introduction1": "<p>I'm Hester and I have been making handbags and accessories in leather for more than 10 years. During that time I developed a preference for vegetable tanned leather. My collection of handbags was inspired by this honest and sustainable material. I make the bags that I want myself... nice leather, few shiny haberdashery and easy to use. Preferably with an extra detail that makes you happy. And you can see this in the colored magnets that appear in my models.</p><p>If you wish to order a handbag, this is done by email to me. This way you can choose a number of features yourself, such as the colors of the details and haberdashery, the construction of the shoulder strap and its length.</p><p>For me, personal contact is important. I like to know where my bag will end up and who I'm making it for.</p>",
+    "introduction2": "<p>If you have any questions, send me a message and I will contact you. If you would like to come and have a look in my studio, this is possible by appointment.</p><p>I live with Jimmy and our 3 cats in Rosmeer. In addition to working in my studio, I teach at Cursa, where you can follow the four-year leather worker course. I also work part-time at CC Lanaken where I program youth performances and classical concerts, among other things. I love music, visiting cities, cooking for friends and family and good food.</p><br><p>See you soon,<br>Hester</p><br><p>P.S. When I'm at work I don't always answer the phone. Leave a message and I will call you back.</p>"
   },
   "contact": {
     "title": "Contact",
@@ -81,7 +81,7 @@
       "name-placeholder": "Enter your name here",
       "email": "Email adress:",
       "email-placeholder": "Enter your email address here",
-      "message": "Bericht:",
+      "message": "Message:",
       "message-placeholder": "Enter your message here...",
       "send": "Send message",
       "cancel": "Cancel"
