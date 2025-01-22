@@ -20,26 +20,32 @@
     "picture": "foto",
     "more-details": "Meer details ...",
     "aimant": {
+      "title": "Aimant",
       "description": "Een stevige handtas in plantaardig gelooid leer met een groot volume.<br>De klep sluit met 3 magneten die naar wens in een andere kleur bekleed kunnen worden.<br>De bodem heeft 4 pootjes en de schouderriem is verstelbaar.",
       "detail-description": "Afmetingen: B 26,5 cm - H 20 cm - D 8 cm<br><br>Beschikbaar in<br>• bruin met magneten in rood leer en bronzen fournituren, de schouderriem is min. 99 cm en max. 110 cm<br>• blauw met magneten in aubergine en bronzen fournituren, de schouderriem is min. 96 cm en max.110 cm<br><br>Prijs: 475 euro"
     },
     "aimant-small": {
+      "title": "Aimant klein",
       "description": "Een stevige handtas in plantaardig gelooid leer.<br>De klep sluit met 2 magneten die naar wens in een andere kleur bekleed kunnen worden.<br>In de kleine versie zitten standaard geen tasvoetjes verwerkt.",
       "detail-description": "Afmetingen: B 20,50 cm - H 16 cm - D 7 cm (loopt smaller toe)<br><br>Beschikbaar in<br>• rose en naturel met mat zilveren fournituren, de schouderriem is min. 98 cm en max. 110 cm<br>• blauw en aubergine met gouden fournituren, de schouderriem is min. 98 cm en max.110 cm<br><br>Prijs: 395 euro"
     },
     "maisa": {
+      "title": "Maisa",
       "description": "Een speelse handtas in soepel plantaardig gelooid leer. De tas sluit met een klep waarin twee blinde magneten verwerkt zijn. Het tasje is licht en super handig voor dagelijks gebruik. Je kan kiezen tussen een kleine en medium versie. Op vraag kan er een zakje met rits in verwerkt worden. Het riempje wordt op 3 verschillende manieren aan de tas vastgemaakt.<br><br>1. op vaste lengte<br>2. een kant vast en andere verstelbaar met geweerknopjes<br>3. twee kanten verstelbaar met geweerknopjes",
       "detail-description": "Afmetingen Maisa klein: B 24 cm - H 16 cm - D 11 cm (loopt smaller toe)<br><br>Direct verkrijgbaar in<br>• rose met mat zilveren fournituren en binnenzakje met rits, verstelbare riem aan één zijde: 96cm tot 101cm (kan aangepast naar wens)<br>310 euro<br>• naturel met rode accenten en zilverkleurige fournituren, vaste riem van 100cm (kan aangepast naar wens)<br>275 euro<br><br>Afmetingen Maisa medium: B 26,50 cm - H 20 cm - D 11 cm (loopt smaller toe)<br><br>Kleurenkaart Maisa: plantaardig gelooid leer type 'Vegline'<br>flessengroen - zachtroze - smaragdgroen - chocoladebruin - roest - mimosa (naturel)<br><br>andere kleuren/leersoorten op aanvraag"
     },
     "hahahandtas": {
+      "title": "Hahahandtas",
       "description": "Deze handtas verenigt eigenschappen van zowel de Aimant als de Maisa. Ze is gemaakt uit stevig tuigleer en sluit met een luxe Excella rits. Ze kreeg haar naam dankzij de letter H waarmee de lussen in de tas verwerkt zijn. Deze handtas is basic (strakke vorm en geen binnenzakjes) en luxueus tegelijk dankzij de aandacht voor detail en de gouden rits.",
       "detail-description": "Afmetingen B 26 cm - H 20 cm - D 10 cm (bovenaan smaller)<br><br>Verkrijgbaar op bestelling in groen, bruin, petrol of rose<br><br>Prijs op aanvraag"
     },
     "eclair": {
+      "title": "Éclair",
       "description": "Nederlandse omschrijving Éclair",
       "detail-description": "Detail omschrijving Éclair"
     },
     "dokterstas": {
+      "title": "Dokterstas",
       "description": "Dit is een echte klassieker onder de handtassen. De tas dankt haar typische vorm aan de gebogen baleinen waarmee de tas sluit.",
       "detail-description": "De dokterstas maak ik enkel op bestelling. Samen overlopen we alle details van jouw versie op maat en daarna maak ik die speciaal voor jou."
     }
