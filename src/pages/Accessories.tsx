@@ -23,32 +23,34 @@ function Accessories() {
   };
 
   const items = accessories.map((item) => {
-    const slides = item.pictures.map((picture) => ({
-      img: picture.file,
-      alt: `${t(`accessories.${item.id}.title`)} ${t("collection.picture")}`,
-    }));
-    return (
-      <GridItem w="100%" key={item.id}>
-        <Card maxW="sm">
-          <CardBody color="orange.900" bgColor={"#FFFFFA"} borderRadius="md">
-            <Carousel slides={slides} maxW={["100%"]} />
-            <Stack mt="6" spacing="3">
-              <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
-              <Text>{t(`accessories.${item.id}.description`)}</Text>
-              <Button
-                colorScheme="green"
-                bgColor={"green.700"}
-                textColor={"orange.50"}
-                w="full"
-                onClick={() => goToDetails(item.id)}
-              >
-                {t("collection.more-details")}
-              </Button>
-            </Stack>
-          </CardBody>
-        </Card>
-      </GridItem>
-    );
+    if (item.show) {
+      const slides = item.pictures.map((picture) => ({
+        img: picture.file,
+        alt: `${t(`accessories.${item.id}.title`)} ${t("collection.picture")}`,
+      }));
+      return (
+        <GridItem w="100%" key={item.id}>
+          <Card maxW="sm">
+            <CardBody color="orange.900" bgColor={"#FFFFFA"} borderRadius="md">
+              <Carousel slides={slides} maxW={["100%"]} />
+              <Stack mt="6" spacing="3">
+                <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
+                <Text>{t(`accessories.${item.id}.description`)}</Text>
+                <Button
+                  colorScheme="green"
+                  bgColor={"green.700"}
+                  textColor={"orange.50"}
+                  w="full"
+                  onClick={() => goToDetails(item.id)}
+                >
+                  {t("collection.more-details")}
+                </Button>
+              </Stack>
+            </CardBody>
+          </Card>
+        </GridItem>
+      );
+    }
   });
 
   const breadcrumb: BreadcrumbProps = {

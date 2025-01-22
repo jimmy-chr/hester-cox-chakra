@@ -1,6 +1,7 @@
 [
   {
     "id": "belt",
+    "show": true,
     "pictures": [
       {
         "file": "/assets/img-accessories/belt1.jpg"
@@ -15,6 +16,7 @@
   },
   {
     "id": "card-holder",
+    "show": false,
     "pictures": [
       {
         "file": "/assets/img-accessories/card-holder1.jpg"
@@ -26,6 +28,7 @@
   },
   {
     "id": "wallet",
+    "show": true,
     "pictures": [
       {
         "file": "/assets/img-accessories/wallet1.jpg"
