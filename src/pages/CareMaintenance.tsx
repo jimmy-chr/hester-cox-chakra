@@ -1,6 +1,12 @@
-import { Text, Image } from "@chakra-ui/react";
+import {
+  Text,
+  Image,
+  Heading,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
 import Page from "../components/Page";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function CareMaintenance() {
@@ -8,6 +14,7 @@ function CareMaintenance() {
     titleId: "care-maintenance",
     titleKey: "care-maintenance.title",
   };
+  const { t } = useTranslation();
 
   return (
     <Page breadcrumb={breadcrumb}>
@@ -21,7 +28,10 @@ function CareMaintenance() {
           float="left"
           marginRight="1em"
         />
-        <Trans i18nKey="care-maintenance.introduction1" />
+        <Heading as="h4" size="md">
+          {t("care-maintenance.veg-tan-title")}
+        </Heading>
+        <Trans i18nKey="care-maintenance.veg-tan-description" />
       </Text>
       <Text>
         <Image
@@ -33,7 +43,18 @@ function CareMaintenance() {
           float="right"
           marginRight="1em"
         />
-        <Trans i18nKey="care-maintenance.introduction2" />
+        <Heading as="h4" size="md">
+          {t("care-maintenance.care-maintenance-title")}
+        </Heading>
+        <UnorderedList>
+          <ListItem>{t("care-maintenance.care-maintenance-item1")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item2")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item3")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item4")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item5")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item6")}</ListItem>
+          <ListItem>{t("care-maintenance.care-maintenance-item7")}</ListItem>
+        </UnorderedList>
       </Text>
     </Page>
   );
