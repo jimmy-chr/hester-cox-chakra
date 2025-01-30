@@ -20,6 +20,7 @@ function Home() {
           alt="Hester Cox Atelier"
           float="left"
           marginRight="1em"
+          marginBottom="1em"
         />
         <Trans i18nKey="home.introduction" />
       </Text>

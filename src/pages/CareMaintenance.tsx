@@ -27,8 +27,9 @@ function CareMaintenance() {
           alt="Hester Cox"
           float="left"
           marginRight="1em"
+          marginBottom="0.5em"
         />
-        <Heading as="h4" size="md">
+        <Heading as="h4" size="md" paddingBottom={"0.5em"}>
           {t("care-maintenance.veg-tan-title")}
         </Heading>
         <Trans i18nKey="care-maintenance.veg-tan-description" />
@@ -41,9 +42,9 @@ function CareMaintenance() {
           src="assets/verhaal-hester2.jpg"
           alt="Hester Cox"
           float="right"
-          marginRight="1em"
+          marginLeft="1em"
         />
-        <Heading as="h4" size="md">
+        <Heading as="h4" size="md" paddingBottom={"0.5em"}>
           {t("care-maintenance.care-maintenance-title")}
         </Heading>
         <UnorderedList>
