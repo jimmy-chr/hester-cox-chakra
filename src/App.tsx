@@ -16,6 +16,16 @@ const theme = extendTheme({
     heading: "'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif",
     body: "'Lato', 'Helvetica Neue', Arial, Helvetica, sans-serif",
   },
+  styles: {
+    global: {
+      p: {
+        margin: "1em 0", // Add margin around <p> elements
+      },
+      li: {
+        margin: "0.5em 0", // Add margin around <p> elements
+      },
+    },
+  },
 });
 
 const App = () => {

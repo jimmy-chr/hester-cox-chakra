@@ -31,7 +31,7 @@ function AboutMe() {
           src="assets/verhaal-hester2.jpg"
           alt="Hester Cox"
           float="right"
-          marginRight="1em"
+          marginLeft="1em"
         />
         <Trans i18nKey="about-me.introduction2" />
       </Text>
