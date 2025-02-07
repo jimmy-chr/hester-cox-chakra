@@ -61,13 +61,21 @@ function ProductDetails({
 
         {/* Product Description */}
         <Box paddingBottom={"1em"}>
-          <Trans i18nKey={description} />
+          <Text>
+            <Trans i18nKey={description} />
+          </Text>
         </Box>
+
+        {/* Size */}
 
         {/* Product Detail Description */}
         <Box paddingBottom={"1em"}>
-          <Trans i18nKey={detailDescription} />
+          <Text>
+            <Trans i18nKey={detailDescription} />
+          </Text>
         </Box>
+
+        {/* Price */}
 
         {/* More Information Button */}
         {!isFormVisible && (

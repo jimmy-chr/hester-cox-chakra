@@ -2,7 +2,6 @@
 
 Todo
 
-- verzorging en onderhoud page
 - standard product detail component
 - standard accessory detail component
 - hook om de json in te lezen
