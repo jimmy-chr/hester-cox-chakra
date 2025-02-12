@@ -1,7 +1,8 @@
 [
   {
     "id": "aimant",
-    "name": "Aimant",
+    "dimensions": { "width": "26,5 cm", "height": "20 cm", "depth": "8 cm" },
+    "price": "475",
     "show": true,
     "pictures": [
       {
@@ -14,7 +15,8 @@
   },
   {
     "id": "aimant-small",
-    "name": "Aimant klein",
+    "dimensions": { "width": "20,5 cm", "height": "16 cm", "depth": "7 cm" },
+    "price": "395",
     "show": true,
     "pictures": [
       {
@@ -27,7 +29,23 @@
   },
   {
     "id": "maisa",
-    "name": "Maisa",
+    "dimensions": { "width": "26,50 cm", "height": "20 cm", "depth": "11 cm" },
+    "show": true,
+    "pictures": [
+      {
+        "file": "/assets/img-collection/maisa1.jpg"
+      },
+      {
+        "file": "/assets/img-collection/maisa2.jpg"
+      },
+      {
+        "file": "/assets/img-collection/maisa3.jpg"
+      }
+    ]
+  },
+  {
+    "id": "maisa-small",
+    "dimensions": { "width": "24 cm", "height": "16 cm", "depth": "11 cm" },
     "show": true,
     "pictures": [
       {
@@ -43,7 +61,7 @@
   },
   {
     "id": "hahahandtas",
-    "name": "HaHaHandtas",
+    "dimensions": { "width": "26 cm", "height": "20 cm", "depth": "10 cm" },
     "show": true,
     "pictures": [
       {
@@ -56,7 +74,6 @@
   },
   {
     "id": "eclair",
-    "name": "Éclair",
     "show": false,
     "pictures": [
       {
@@ -69,7 +86,6 @@
   },
   {
     "id": "dokterstas",
-    "name": "Dokterstas",
     "show": true,
     "pictures": [
       {

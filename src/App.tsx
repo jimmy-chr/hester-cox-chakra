@@ -18,11 +18,8 @@ const theme = extendTheme({
   },
   styles: {
     global: {
-      p: {
-        margin: "1em 0", // Add margin around <p> elements
-      },
       li: {
-        margin: "0.5em 0", // Add margin around <p> elements
+        margin: "0.5em 0",
       },
     },
   },

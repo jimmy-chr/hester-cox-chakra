@@ -2,10 +2,7 @@
 
 Todo
 
-- verzorging en onderhoud page
-- standard product detail component
-- standard accessory detail component
-- hook om de json in te lezen
+- hook om de json in te lezen en te typen
 
 - update chakra 3.0
 - other updates

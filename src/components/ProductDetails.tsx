@@ -8,6 +8,8 @@ type ProductDetailsProps = {
   description: string;
   detailDescription: string;
   pictures: { img: string; alt: string }[];
+  dimensions?: { width: string; height: string; depth: string };
+  price?: string;
 };
 
 function ProductDetails({
@@ -15,6 +17,8 @@ function ProductDetails({
   description,
   detailDescription,
   pictures,
+  dimensions,
+  price,
 }: ProductDetailsProps) {
   const { t } = useTranslation();
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -61,12 +65,36 @@ function ProductDetails({
 
         {/* Product Description */}
         <Box paddingBottom={"1em"}>
-          <Trans i18nKey={description} />
+          <Text>
+            <Trans i18nKey={description} />
+          </Text>
         </Box>
+
+        {/* Size */}
+        {dimensions && (
+          <Box paddingBottom={"1em"}>
+            <Text fontWeight={"bold"}>{t("product-details.dimensions")}</Text>
+            <Text>{`${t("product-details.width")} ${dimensions.width} - ${t(
+              "product-details.height"
+            )} ${dimensions.height} - ${t("product-details.depth")} ${
+              dimensions.depth
+            }`}</Text>
+          </Box>
+        )}
 
         {/* Product Detail Description */}
         <Box paddingBottom={"1em"}>
-          <Trans i18nKey={detailDescription} />
+          <Text>
+            <Trans i18nKey={detailDescription} />
+          </Text>
+        </Box>
+
+        {/* Price */}
+        <Box paddingBottom={"1em"}>
+          <Text fontWeight={"bold"}>{t("product-details.price")}</Text>
+          <Text>
+            {price ? `${price} euro` : t("product-details.price-on-request")}
+          </Text>
         </Box>
 
         {/* More Information Button */}

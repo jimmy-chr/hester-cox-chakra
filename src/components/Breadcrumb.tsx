@@ -43,7 +43,7 @@ const Breadcrumb: React.FC<BreadcrumbProps> = ({
             </Heading>
           </Link>
           <Text fontSize="2xl" color={"green.700"}>
-            {"/"}
+            /
           </Text>
         </Box>
       ) : (

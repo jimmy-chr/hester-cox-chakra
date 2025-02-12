@@ -1,6 +1,7 @@
 [
   {
     "id": "belt",
+    "price": "120",
     "show": true,
     "pictures": [
       {
