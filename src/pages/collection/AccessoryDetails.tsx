@@ -36,6 +36,7 @@ function AccessoryDetails() {
           `accessories.${accessoryItem.id}.detail-description`
         )}
         pictures={pictures}
+        price={accessoryItem.price}
       />
     </Page>
   );

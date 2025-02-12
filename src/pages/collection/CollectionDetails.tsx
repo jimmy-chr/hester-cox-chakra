@@ -14,26 +14,30 @@ function CollectionDetails() {
 
   const pictures = collectionItem.pictures.map((picture) => ({
     img: picture.file,
-    alt: `${collectionItem.name} ${t("collection.picture")}`,
+    alt: `${t(`collection.${collectionItem.id}.title`)} ${t(
+      "collection.picture"
+    )}`,
   }));
 
   const breadcrumb: BreadcrumbProps = {
     titleId: "collection",
     titleKey: "collection.title",
     subTitleId: "collection-item",
-    subTitleKey: collectionItem.name,
+    subTitleKey: t(`collection.${collectionItem.id}.title`),
     titleLink: "/collection",
   };
 
   return (
     <Page breadcrumb={breadcrumb}>
       <ProductDetails
-        name={collectionItem.name}
+        name={t(`collection.${collectionItem.id}.title`)}
         description={t(`collection.${collectionItem.id}.description`)}
         detailDescription={t(
           `collection.${collectionItem.id}.detail-description`
         )}
         pictures={pictures}
+        dimensions={collectionItem.dimensions}
+        price={collectionItem.price}
       />
     </Page>
   );
