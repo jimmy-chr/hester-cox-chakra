@@ -6,10 +6,10 @@ import { MdLanguage } from "react-icons/md";
 export const LanguageSelect = () => {
   const { i18n } = useTranslation();
 
-  const changeLanguage = (event: ChangeEvent<HTMLSelectElement>) => {
+  const changeLanguage = async (event: ChangeEvent<HTMLSelectElement>) => {
     const language = event.target.value;
     try {
-      i18n.changeLanguage(language);
+      await i18n.changeLanguage(language);
       localStorage.setItem("i18nextLng", language); // Save language to localStorage
     } catch (error) {
       console.error("Error saving language to localStorage", error);
@@ -21,7 +21,11 @@ export const LanguageSelect = () => {
       <Select
         width={"4em"}
         defaultValue={i18n.resolvedLanguage}
-        onChange={changeLanguage}
+        onChange={(e) => {
+          changeLanguage(e).catch((error) => {
+            console.error("Error changing language", error);
+          });
+        }}
         variant={"flushed"}
         border={0}
         sx={{

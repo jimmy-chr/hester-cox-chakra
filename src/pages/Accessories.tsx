@@ -10,14 +10,15 @@ import {
 } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { useTranslation } from "react-i18next";
-import accessories from "../config/accessories.json";
 import Carousel from "../components/Carousel";
 import { useNavigate } from "react-router-dom";
 import { BreadcrumbProps } from "../components/Breadcrumb";
+import useAccessories from "../hooks/useAccessories";
 
 function Accessories() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const accessories = useAccessories();
   const goToDetails = (id: string) => {
     navigate(`/accessories/${id}`);
   };
@@ -26,7 +27,7 @@ function Accessories() {
     if (item.show) {
       const slides = item.pictures.map((picture) => ({
         img: picture.file,
-        alt: `${t(`accessories.${item.id}.title`)} ${t("collection.picture")}`,
+        alt: `${item.title} ${t("collection.picture")}`,
       }));
       return (
         <GridItem w="100%" key={item.id}>
@@ -35,7 +36,7 @@ function Accessories() {
               <Carousel slides={slides} maxW={["100%"]} />
               <Stack mt="6" spacing="3">
                 <Heading size="md">{t(`accessories.${item.id}.title`)}</Heading>
-                <Text>{t(`accessories.${item.id}.description`)}</Text>
+                <Text>{item.description}</Text>
                 <Button
                   colorScheme="green"
                   bgColor={"green.700"}

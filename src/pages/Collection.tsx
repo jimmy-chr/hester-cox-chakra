@@ -10,15 +10,16 @@ import {
 } from "@chakra-ui/react";
 import Page from "../components/Page";
 import { Trans, useTranslation } from "react-i18next";
-import collection from "../config/collection.json";
 import Carousel from "../components/Carousel";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { BreadcrumbProps } from "../components/Breadcrumb";
+import useCollection from "../hooks/useCollection";
 
 function Collection() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const collection = useCollection();
 
   const goToDetails = (id: string) => {
     navigate(`/collection/${id}`);
@@ -28,13 +29,13 @@ function Collection() {
     if (item.show) {
       const slides = item.pictures.map((picture) => ({
         img: picture.file,
-        alt: `${t(`collection.${item.id}.title`)} ${t("collection.picture")}`,
+        alt: `${item.title} ${t("collection.picture")}`,
       }));
       return (
         <React.Fragment key={item.id}>
           <Divider />
           <Heading id={item.id} as="h4" size={"lg"}>
-            {t(`collection.${item.id}.title`)}
+            {item.title}
           </Heading>
           <Flex
             direction={{ base: "column", md: "row" }}
@@ -47,7 +48,7 @@ function Collection() {
             </Box>
             <VStack width={"full"} alignItems={"flex-start"}>
               <Text paddingBottom={"1em"}>
-                <Trans i18nKey={`collection.${item.id}.description`} />
+                <Trans i18nKey={item.description} />
               </Text>
               <Box width={"full"}>
                 <Center>
