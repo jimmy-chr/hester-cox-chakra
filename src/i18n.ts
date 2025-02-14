@@ -13,7 +13,7 @@ const resources = {
   nl: { translation: nlTranslation },
 };
 
-await i18n
+void i18n
   .use(HttpApi)
   .use(LanguageDetector)
   .use(initReactI18next)
