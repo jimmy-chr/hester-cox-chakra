@@ -1,40 +1,37 @@
 import Page from "../../components/Page";
 import { useParams } from "react-router-dom";
-import collection from "../../config/collection.json";
 import ProductDetails from "../../components/ProductDetails";
 import { useTranslation } from "react-i18next";
 import { BreadcrumbProps } from "../../components/Breadcrumb";
+import useCollection from "../../hooks/useCollection";
 
 function CollectionDetails() {
   const { t } = useTranslation();
   const { id } = useParams();
+  const collection = useCollection();
   const collectionItem = collection.find((item) => item.id === id);
 
   if (!collectionItem) return;
 
   const pictures = collectionItem.pictures.map((picture) => ({
     img: picture.file,
-    alt: `${t(`collection.${collectionItem.id}.title`)} ${t(
-      "collection.picture"
-    )}`,
+    alt: `${collectionItem.title} ${t("collection.picture")}`,
   }));
 
   const breadcrumb: BreadcrumbProps = {
     titleId: "collection",
     titleKey: "collection.title",
     subTitleId: "collection-item",
-    subTitleKey: t(`collection.${collectionItem.id}.title`),
+    subTitleKey: collectionItem.title,
     titleLink: "/collection",
   };
 
   return (
     <Page breadcrumb={breadcrumb}>
       <ProductDetails
-        name={t(`collection.${collectionItem.id}.title`)}
-        description={t(`collection.${collectionItem.id}.description`)}
-        detailDescription={t(
-          `collection.${collectionItem.id}.detail-description`
-        )}
+        name={collectionItem.title}
+        description={collectionItem.description}
+        detailDescription={collectionItem.detailDescription}
         pictures={pictures}
         dimensions={collectionItem.dimensions}
         price={collectionItem.price}
