@@ -1,6 +1,6 @@
 import { Text, Image } from "@chakra-ui/react";
 import Page from "../components/Page";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function AboutMe() {
@@ -8,6 +8,7 @@ function AboutMe() {
     titleId: "about-me",
     titleKey: "about-me.title",
   };
+  useTranslation();
 
   return (
     <Page breadcrumb={breadcrumb}>
