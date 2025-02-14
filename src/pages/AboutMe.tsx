@@ -1,6 +1,6 @@
 import { Text, Image } from "@chakra-ui/react";
 import Page from "../components/Page";
-import { Trans } from "react-i18next";
+import { Trans, useTranslation } from "react-i18next";
 import { BreadcrumbProps } from "../components/Breadcrumb";
 
 function AboutMe() {
@@ -8,6 +8,9 @@ function AboutMe() {
     titleId: "about-me",
     titleKey: "about-me.title",
   };
+  // Need this for language to change in Trans component
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const { t } = useTranslation();
 
   return (
     <Page breadcrumb={breadcrumb}>
