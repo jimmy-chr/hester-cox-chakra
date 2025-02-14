@@ -8,9 +8,7 @@ function AboutMe() {
     titleId: "about-me",
     titleKey: "about-me.title",
   };
-  // Need this for language to change in Trans component
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const { t } = useTranslation();
+  useTranslation();
 
   return (
     <Page breadcrumb={breadcrumb}>
