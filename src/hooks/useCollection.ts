@@ -7,6 +7,7 @@ type CollectionItem = {
   title: string;
   description: string;
   detailDescription: string;
+  directAvailable?: string;
   pictures: { file: string }[];
   dimensions?: { width: string; height: string; depth: string };
   price?: string;
@@ -23,6 +24,7 @@ const useCollection = () => {
       title: t(`collection.${item.id}.title`),
       description: t(`collection.${item.id}.description`),
       detailDescription: t(`collection.${item.id}.detail-description`),
+      directAvailable: t(`collection.${item.id}.direct-available`),
     }));
     setItems(collectionItems);
   }, [t]);

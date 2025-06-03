@@ -7,6 +7,7 @@ type ProductDetailsProps = {
   name: string;
   description: string;
   detailDescription: string;
+  directAvailable?: string;
   pictures: { img: string; alt: string }[];
   dimensions?: { width: string; height: string; depth: string };
   price?: string;
@@ -16,6 +17,7 @@ function ProductDetails({
   name,
   description,
   detailDescription,
+  directAvailable,
   pictures,
   dimensions,
   price,
@@ -79,6 +81,25 @@ function ProductDetails({
             )} ${dimensions.height} - ${t("product-details.depth")} ${
               dimensions.depth
             }`}</Text>
+          </Box>
+        )}
+
+        {/* Product Detail Description */}
+        <Box paddingBottom={"1em"}>
+          <Text>
+            <Trans i18nKey={detailDescription} />
+          </Text>
+        </Box>
+
+        {/* Direct availability */}
+        {directAvailable && (
+          <Box paddingBottom={"1em"}>
+            <Text fontWeight={"bold"}>
+              {t("product-details.direct-available")}
+            </Text>
+            <Text>
+              <Trans i18nKey={directAvailable} />
+            </Text>
           </Box>
         )}
 

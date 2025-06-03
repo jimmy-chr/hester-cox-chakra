@@ -31,6 +31,7 @@ function CollectionDetails() {
       <ProductDetails
         name={collectionItem.title}
         description={collectionItem.description}
+        directAvailable={collectionItem.directAvailable}
         detailDescription={collectionItem.detailDescription}
         pictures={pictures}
         dimensions={collectionItem.dimensions}
