@@ -85,11 +85,13 @@ function ProductDetails({
         )}
 
         {/* Product Detail Description */}
-        <Box paddingBottom={"1em"}>
-          <Text>
-            <Trans i18nKey={detailDescription} />
-          </Text>
-        </Box>
+        {detailDescription && (
+          <Box paddingBottom={"1em"}>
+            <Text>
+              <Trans i18nKey={detailDescription} />
+            </Text>
+          </Box>
+        )}
 
         {/* Direct availability */}
         {directAvailable && (
@@ -103,11 +105,9 @@ function ProductDetails({
           </Box>
         )}
 
-        {/* Product Detail Description */}
+        {/* Other variants */}
         <Box paddingBottom={"1em"}>
-          <Text>
-            <Trans i18nKey={detailDescription} />
-          </Text>
+          <Text fontWeight={"bold"}>{t("collection.other-variants")}</Text>
         </Box>
 
         {/* Price */}
