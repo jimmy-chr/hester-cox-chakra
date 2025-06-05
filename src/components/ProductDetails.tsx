@@ -72,6 +72,15 @@ function ProductDetails({
           </Text>
         </Box>
 
+        {/* Product Detail Description */}
+        {detailDescription && (
+          <Box paddingBottom={"1em"}>
+            <Text>
+              <Trans i18nKey={detailDescription} />
+            </Text>
+          </Box>
+        )}
+
         {/* Size */}
         {dimensions && (
           <Box paddingBottom={"1em"}>
@@ -84,31 +93,24 @@ function ProductDetails({
           </Box>
         )}
 
-        {/* Product Detail Description */}
-        {detailDescription && (
-          <Box paddingBottom={"1em"}>
-            <Text>
-              <Trans i18nKey={detailDescription} />
-            </Text>
-          </Box>
-        )}
-
         {/* Direct availability */}
         {directAvailable && (
-          <Box paddingBottom={"1em"}>
-            <Text fontWeight={"bold"}>
-              {t("product-details.direct-available")}
-            </Text>
-            <Text>
-              <Trans i18nKey={directAvailable} />
-            </Text>
-          </Box>
-        )}
+          <>
+            <Box paddingBottom={"1em"}>
+              <Text fontWeight={"bold"}>
+                {t("product-details.direct-available")}
+              </Text>
+              <Text>
+                <Trans i18nKey={directAvailable} />
+              </Text>
+            </Box>
 
-        {/* Other variants */}
-        <Box paddingBottom={"1em"}>
-          <Text fontWeight={"bold"}>{t("collection.other-variants")}</Text>
-        </Box>
+            {/* Other variants */}
+            <Box paddingBottom={"1em"}>
+              <Text fontWeight={"bold"}>{t("collection.other-variants")}</Text>
+            </Box>
+          </>
+        )}
 
         {/* Price */}
         <Box paddingBottom={"1em"}>
